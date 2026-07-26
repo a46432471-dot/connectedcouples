@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Love Connections | ClassyDate</title>
+    <meta name="description" content="ClassyDate love connections and success stories.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f3e8ff;
+            color: #1a0533;
+            min-height: 100vh;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        /* ============================================================ */
+        /* HEADER                                                       */
+        /* ============================================================ */
+        .cb-shell-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(108, 60, 179, 0.12);
+        }
+
+        .cb-shell-header__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cb-shell-brand {
+            display: flex;
+            align-items: center;
+            font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a0533;
+            margin-left: -4px;
+        }
+
+        .cb-shell-brand .heart {
+            color: #ff0000;
+            display: inline-block;
+        }
+
+        .cb-shell-brand span {
+            font-family: "Inter", sans-serif;
+            font-weight: 300;
+            color: #6c3cb3;
+        }
+
+        /* ============================================================ */
+        /* CONNECTIONS PAGE                                            */
+        /* ============================================================ */
+        .connections-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px 40px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-header .icon {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .page-header h1 {
+            font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
+            font-size: 36px;
+            color: #1a0533;
+            font-weight: 700;
+        }
+
+        .page-header .subtitle {
+            color: rgba(26, 5, 51, 0.5);
+            font-size: 16px;
+            margin-top: 4px;
+            font-family: "Inter", sans-serif;
+        }
+
+        .stats-banner {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            padding: 20px 24px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 16px;
+            border: 1px solid rgba(108, 60, 179, 0.08);
+        }
+
+        .stats-banner .stat-item {
+            text-align: center;
+        }
+
+        .stats-banner .stat-item .number {
+            font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #6c3cb3;
+        }
+
+        .stats-banner .stat-item .label {
+            font-size: 13px;
+            color: rgba(26, 5, 51, 0.5);
+            font-family: "Inter", sans-serif;
+        }
+
+        /* ============================================================ */
+        /* MONTH SECTION                                                */
+        /* ============================================================ */
+        .month-section {
+            margin-bottom: 40px;
+        }
+
+        .month-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(108, 60, 179, 0.15);
+        }
+
+        .month-header .month-icon {
+            font-size: 28px;
+        }
+
+        .month-header h2 {
+            font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
+            font-size: 24px;
+            color: #1a0533;
+            font-weight: 700;
+        }
+
+        .month-header .count {
+            margin-left: auto;
+            font-size: 14px;
+            color: rgba(26, 5, 51, 0.4);
+            font-family: "Inter", sans-serif;
+        }
+
+        /* ============================================================ */
+        /* COUPLE CARDS GRID - PROFESSIONAL                            */
+        /* ============================================================ */
+        .couples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 20px;
+        }
+
+        .couple-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(108, 60, 179, 0.08);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .couple-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(108, 60, 179, 0.12);
+            border-color: rgba(108, 60, 179, 0.2);
+        }
+
+        .couple-card__header {
+            padding: 16px 20px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(108, 60, 179, 0.06);
+        }
+
+        .couple-card__header .names {
+            font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: #1a0533;
+        }
+
+        .couple-card__header .badge {
+            font-size: 11px;
+            background: #6c3cb3;
+            color: #fff;
+            padding: 2px 12px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-family: "Inter", sans-serif;
+        }
+
+        .couple-card__body {
+            padding: 12px 20px 8px;
+        }
+
+        .couple-card__body .partner-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 4px 0;
+            font-size: 13px;
+            color: rgba(26, 5, 51, 0.6);
+            font-family: "Inter", sans-serif;
+        }
+
+        .couple-card__body .partner-info .flag {
+            font-size: 16px;
+        }
+
+        .couple-card__body .partner-info .name {
+            font-weight: 600;
+            color: #1a0533;
+        }
+
+        .couple-card__body .partner-info .age {
+            color: #6c3cb3;
+            font-weight: 600;
+        }
+
+        .couple-card__body .partner-info .kids {
+            color: rgba(26, 5, 51, 0.4);
+            font-size: 12px;
+        }
+
+        .couple-card__body .partner-info .whatsapp {
+            color: #25D366;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: auto;
+            font-family: "Inter", sans-serif;
+        }
+
+        .couple-card__footer {
+            padding: 8px 20px 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(108, 60, 179, 0.06);
+        }
+
+        .couple-card__footer .date {
+            font-size: 12px;
+            color: rgba(26, 5, 51, 0.4);
+            font-family: "Inter", sans-serif;
+        }
+
+        .couple-card__footer .view-btn {
+            padding: 4px 16px;
+            background: rgba(108, 60, 179, 0.08);
+            color: #1a0533;
+            border: none;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: "Inter", sans-serif;
+        }
+
+        .couple-card__footer .view-btn:hover {
+            background: #6c3cb3;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* ============================================================ */
+        /* NEXT MONTH MEETING SECTION - NEW                            */
+        /* ============================================================ */
+        .next-month-section {
+            margin: 40px 0 30px;
+            padding: 28px 30px;
+            background: linear-gradient(135deg, rgba(108, 60, 179, 0.08), rgba(74, 26, 107, 0.05));
+            border-radius: 16px;
+            border: 2px solid rgba(108, 60, 179, 0.15);
+        }
+
+        .next-month-section .header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .next-month-section .header .icon {
+            font-size: 32px;
+        }
+
+        .next-month-section .header h2 {
+            font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
+            font-size: 24px;
+            color: #1a0533;
+            font-weight: 700;
+        }
+
+        .next-month-section .header .count-badge {
+            margin-left: auto;
+            background: #6c3cb3;
+            color: #fff;
+            padding: 4px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: "Inter", sans-serif;
+        }
+
+        .next-month-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .next-month-card {
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 12px;
+            padding: 16px 18px;
+            border: 1px solid rgba(108, 60, 179, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .next-month-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(108, 60, 179, 0.08);
+        }
+
+        .next-month-card .info .names {
+            font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: #1a0533;
+        }
+
+        .next-month-card .info .details {
+            font-size: 12px;
+            color: rgba(26, 5, 51, 0.5);
+            margin-top: 2px;
+            font-family: "Inter", sans-serif;
+        }
+
+        .next-month-card .info .meeting-date {
+            font-size: 12px;
+            color: #6c3cb3;
+            font-weight: 600;
+            margin-top: 2px;
+            font-family: "Inter", sans-serif;
+        }
+
+        .next-month-card .status-badge {
+            font-size: 11px;
+            background: #FFD700;
+            color: #1a0533;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-family: "Inter", sans-serif;
+        }
+
+        /* ============================================================ */
+        /* UPCOMING MEETINGS SECTION                                   */
+        /* ============================================================ */
+        .upcoming-section {
+            margin-top: 40px;
+            padding: 24px 28px;
+            background: rgba(108, 60, 179, 0.06);
+            border-radius: 16px;
+            border: 1px solid rgba(108, 60, 179, 0.1);
+        }
+
+        .upcoming-section .header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .upcoming-section .header .icon {
+            font-size: 24px;
+        }
+
+        .upcoming-section .header h2 {
+            font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
+            font-size: 22px;
+            color: #1a0533;
+            font-weight: 700;
+        }
+
+        .upcoming-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .upcoming-card {
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 12px;
+            padding: 16px 18px;
+            border: 1px solid rgba(108, 60, 179, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .upcoming-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(108, 60, 179, 0.08);
+        }
+
+        .upcoming-card .info .names {
+            font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a0533;
+        }
+
+        .upcoming-card .info .details {
+            font-size: 13px;
+            color: rgba(26, 5, 51, 0.5);
+            margin-top: 2px;
+            font-family: "Inter", sans-serif;
+        }
+
+        .upcoming-card .call-btn {
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #6c3cb3, #4a1a6b);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: "Inter", sans-serif;
+        }
+
+        .upcoming-card .call-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(108, 60, 179, 0.25);
+        }
+
+        /* ============================================================ */
+        /* MODAL - PROFESSIONAL VERSION                                */
+        /* ============================================================ */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeInModal 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        @keyframes fadeInModal {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .modal-content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            padding: 32px 28px 28px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: rgba(26, 5, 51, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 4px 8px;
+        }
+
+        .modal-close:hover {
+            color: #1a0533;
+            transform: rotate(90deg);
+        }
+
+        .modal-title {
+            font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
+            font-size: 28px;
+            color: #1a0533;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 6px;
+        }
+
+        .modal-title .heart {
+            color: #ff0000;
+        }
+
+        .modal-subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: rgba(26, 5, 51, 0.4);
+            margin-bottom: 20px;
+            font-family: "Inter", sans-serif;
+        }
+
+        .modal-partners {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .modal-partner {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 18px 16px;
+            text-align: center;
+            border: 1px solid rgba(108, 60, 179, 0.08);
+        }
+
+        .modal-partner .avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6c3cb3, #4a1a6b);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 10px;
+            font-family: "Inter", sans-serif;
+        }
+
+        .modal-partner .pname {
+            font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a0533;
+        }
+
+        .modal-partner .pdetail {
+            font-size: 14px;
+            color: rgba(26, 5, 51, 0.5);
+            font-family: "Inter", sans-serif;
+            margin-top: 2px;
+        }
+
+        .modal-partner .pkids {
+            font-size: 13px;
+            color: rgba(26, 5, 51, 0.4);
+            margin-top: 4px;
+            font-family: "Inter", sans-serif;
+        }
+
+        .modal-partner .pwhatsapp {
+            font-size: 13px;
+            color: #25D366;
+            font-weight: 600;
+            margin-top: 4px;
+            font-family: "Inter", sans-serif;
+        }
+
+        .modal-status {
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            font-family: "Inter", sans-serif;
+            margin-bottom: 12px;
+        }
+
+        .modal-status.connected {
+            background: rgba(40, 167, 69, 0.12);
+            color: #28a745;
+        }
+
+        .modal-status.pending {
+            background: rgba(255, 193, 7, 0.12);
+            color: #b8960f;
+        }
+
+        .modal-status.upcoming {
+            background: rgba(108, 60, 179, 0.12);
+            color: #6c3cb3;
+        }
+
+        .modal-story {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+            border: 1px solid rgba(108, 60, 179, 0.08);
+            margin-bottom: 16px;
+        }
+
+        .modal-story .label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: rgba(26, 5, 51, 0.4);
+            display: block;
+            margin-bottom: 4px;
+            font-family: "Inter", sans-serif;
+        }
+
+        .modal-story .story-text {
+            font-size: 14px;
+            color: rgba(26, 5, 51, 0.7);
+            line-height: 1.6;
+            font-family: "Inter", sans-serif;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .modal-actions button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: "Inter", sans-serif;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-share {
+            background: rgba(108, 60, 179, 0.08);
+            color: #1a0533;
+        }
+
+        .btn-share:hover {
+            background: rgba(108, 60, 179, 0.18);
+            transform: translateY(-2px);
+        }
+
+        /* ============================================================ */
+        /* TOAST                                                       */
+        /* ============================================================ */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 12px 20px;
+            background: #1a0533;
+            color: #fff;
+            border-radius: 10px;
+            font-family: "Inter", sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            z-index: 999;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 360px;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .toast.success {
+            background: #28a745;
+        }
+        .toast.error {
+            background: #dc3545;
+        }
+
+        /* ============================================================ */
+        /* RESPONSIVE                                                   */
+        /* ============================================================ */
+        @media (max-width: 768px) {
+            .connections-wrapper {
+                padding: 76px 12px 30px;
+            }
+
+            .page-header h1 {
+                font-size: 28px;
+            }
+
+            .stats-banner {
+                gap: 20px;
+                padding: 16px;
+            }
+
+            .stats-banner .stat-item .number {
+                font-size: 24px;
+            }
+
+            .month-header h2 {
+                font-size: 20px;
+            }
+
+            .couples-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-partners {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                padding: 24px 16px 20px;
+                margin: 10px;
+            }
+
+            .modal-title {
+                font-size: 22px;
+            }
+
+            .upcoming-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .next-month-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cb-shell-header__inner {
+                height: 60px;
+                padding: 0 12px;
+            }
+
+            .cb-shell-brand {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 24px;
+            }
+
+            .page-header .icon {
+                font-size: 36px;
+            }
+
+            .stats-banner {
+                flex-direction: column;
+                gap: 12px;
+                padding: 14px;
+            }
+
+            .stats-banner .stat-item .number {
+                font-size: 22px;
+            }
+
+            .couple-card__header .names {
+                font-size: 15px;
+            }
+
+            .modal-title {
+                font-size: 18px;
+            }
+
+            .modal-actions {
+                flex-direction: column;
+            }
+
+            .upcoming-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .next-month-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .cb-shell-brand {
+                font-size: 16px;
+            }
+
+            .next-month-section .header h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- HEADER                                                       -->
+    <!-- ============================================================ -->
+    <header class="cb-shell-header" role="banner">
+        <div class="cb-shell-header__inner">
+            <a class="cb-shell-brand" href="/">
+                Classy<span>Date</span><span class="heart">❤️</span>
+            </a>
+            <div style="width:50px;"></div>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- CONNECTIONS PAGE                                             -->
+    <!-- ============================================================ -->
+    <main class="connections-wrapper">
+        <div class="page-header">
+            <span class="icon">💞</span>
+            <h1>Love Connections</h1>
+            <p class="subtitle">Real people. Real love. Real stories from ClassyDate</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-banner">
+            <div class="stat-item">
+                <div class="number" id="total-couples">0</div>
+                <div class="label">Total Couples</div>
+            </div>
+            <div class="stat-item">
+                <div class="number" id="total-countries">0</div>
+                <div class="label">Countries</div>
+            </div>
+            <div class="stat-item">
+                <div class="number" id="monthly-average">0</div>
+                <div class="label">Monthly Average</div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- NEXT MONTH MEETING SECTION - NEW                            -->
+        <!-- ============================================================ -->
+        <div class="next-month-section" id="next-month-section">
+            <div class="header">
+                <span class="icon">📅</span>
+                <h2>Members Meeting Next Month</h2>
+                <span class="count-badge" id="next-month-count">23 Members</span>
+            </div>
+            <div class="next-month-grid" id="next-month-grid">
+                <!-- Rendered by JavaScript -->
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- MONTH SECTIONS                                              -->
+        <!-- ============================================================ -->
+        <div id="connections-container"></div>
+
+        <!-- ============================================================ -->
+        <!-- UPCOMING MEETINGS                                            -->
+        <!-- ============================================================ -->
+        <div class="upcoming-section" id="upcoming-section">
+            <div class="header">
+                <span class="icon">🗓️</span>
+                <h2>This Week's Meetings</h2>
+            </div>
+            <div class="upcoming-grid" id="upcoming-grid">
+                <!-- Rendered by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- MODAL - PROFESSIONAL VERSION                                 -->
+    <!-- ============================================================ -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <h2 class="modal-title" id="modal-title">George Marcus <span class="heart">❤️</span> Mary Nyambaga</h2>
+            <p class="modal-subtitle" id="modal-connected-date">Connected on April 29, 2026</p>
+            
+            <div style="text-align:center;margin-bottom:12px;">
+                <span class="modal-status connected" id="modal-status">✅ Connected</span>
+            </div>
+
+            <div class="modal-partners" id="modal-partners">
+                <div class="modal-partner">
+                    <div class="avatar" id="partner1-avatar">GM</div>
+                    <div class="pname" id="partner1-name">George Marcus</div>
+                    <div class="pdetail" id="partner1-detail">🇺🇸 United States · Age 34</div>
+                    <div class="pkids" id="partner1-kids">👶 1 child</div>
+                    <div class="pwhatsapp" id="partner1-whatsapp">📱 +1(580)502-XXXX</div>
+                </div>
+                <div class="modal-partner">
+                    <div class="avatar" id="partner2-avatar">MN</div>
+                    <div class="pname" id="partner2-name">Mary Nyambaga</div>
+                    <div class="pdetail" id="partner2-detail">🇺🇬 Uganda · Age 23</div>
+                    <div class="pkids" id="partner2-kids">👶 2 children</div>
+                    <div class="pwhatsapp" id="partner2-whatsapp">📱 +256-7030-XXXX</div>
+                </div>
+            </div>
+
+            <div class="modal-story">
+                <span class="label">💬 Their Love Story</span>
+                <span class="story-text" id="modal-story">They met through ClassyDate and instantly connected over their love for travel and family. After weeks of meaningful conversations, they are planning to meet in person.</span>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-whatsapp" onclick="contactOnWhatsApp()">💬 Contact on WhatsApp</button>
+                <button class="btn-share" onclick="shareLove()">↗ Share Story</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TOAST                                                       -->
+    <!-- ============================================================ -->
+    <div class="toast" id="toast"></div>
+
+    <!-- ============================================================ -->
+    <!-- SCRIPTS                                                      -->
+    <!-- ============================================================ -->
+    <script>
+        // ============================================================
+        // DATA - 15+ COUPLES PER MONTH
+        // ============================================================
+        const connectionsData = {
+            'April 2026': [
+                { 
+                    partner1: 'George Marcus', partner2: 'Mary Nyambaga',
+                    p1Age: 34, p2Age: 23,
+                    p1Country: '🇺🇸 United States', p2Country: '🇺🇬 Uganda',
+                    p1Kids: 1, p2Kids: 2,
+                    p1WhatsApp: '+1(580)502-XXXX', p2WhatsApp: '+256-7030-XXXX',
+                    date: 'April 29, 2026',
+                    status: 'connected',
+                    story: 'They met through ClassyDate and instantly connected over their love for travel and family. After weeks of meaningful conversations, they are planning to meet in person.'
+                },
+                { 
+                    partner1: 'James Ochieng', partner2: 'Sarah Akinyi',
+                    p1Age: 32, p2Age: 28,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 1,
+                    p1WhatsApp: '+254-712-XXX-XXX', p2WhatsApp: '+254-723-XXX-XXX',
+                    date: 'April 27, 2026',
+                    status: 'connected',
+                    story: 'James and Sarah discovered they grew up in the same neighborhood. Their shared memories of the old town brought them closer together.'
+                },
+                { 
+                    partner1: 'David Mwangi', partner2: 'Grace Wanjiru',
+                    p1Age: 35, p2Age: 30,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 2, p2Kids: 0,
+                    p1WhatsApp: '+254-720-XXX-XXX', p2WhatsApp: '+254-733-XXX-XXX',
+                    date: 'April 25, 2026',
+                    status: 'connected',
+                    story: 'A love for coffee and long walks brought David and Grace together. They now run a small coffee shop together.'
+                },
+                { 
+                    partner1: 'Michael Kariuki', partner2: 'Esther Njeri',
+                    p1Age: 29, p2Age: 26,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇺🇬 Uganda',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-710-XXX-XXX', p2WhatsApp: '+256-702-XXX-XXX',
+                    date: 'April 22, 2026',
+                    status: 'connected',
+                    story: 'Long-distance never stopped them. Michael and Esther video-called every day for 3 months before meeting in person.'
+                },
+                { 
+                    partner1: 'Peter Odhiambo', partner2: 'Ruth Auma',
+                    p1Age: 31, p2Age: 27,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 1, p2Kids: 0,
+                    p1WhatsApp: '+254-798-XXX-XXX', p2WhatsApp: '+254-722-XXX-XXX',
+                    date: 'April 20, 2026',
+                    status: 'connected',
+                    story: 'They met at a local community event and realized they had been matched on ClassyDate weeks earlier. It was fate.'
+                },
+                { 
+                    partner1: 'Samuel Kimani', partner2: 'Faith Muthoni',
+                    p1Age: 33, p2Age: 29,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇹🇿 Tanzania',
+                    p1Kids: 0, p2Kids: 1,
+                    p1WhatsApp: '+254-716-XXX-XXX', p2WhatsApp: '+255-712-XXX-XXX',
+                    date: 'April 18, 2026',
+                    status: 'connected',
+                    story: 'A shared love for African literature brought them together. They now read to each other every night.'
+                },
+                { 
+                    partner1: 'Thomas Mwangi', partner2: 'Lilian Wanjiru',
+                    p1Age: 30, p2Age: 25,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-711-XXX-XXX', p2WhatsApp: '+254-724-XXX-XXX',
+                    date: 'April 15, 2026',
+                    status: 'connected',
+                    story: 'They discovered they both loved hiking and nature. Their first date was a hike up Mount Kenya.'
+                },
+                { 
+                    partner1: 'Robert Njoroge', partner2: 'Jane Wairimu',
+                    p1Age: 36, p2Age: 32,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇺🇸 USA',
+                    p1Kids: 2, p2Kids: 1,
+                    p1WhatsApp: '+254-721-XXX-XXX', p2WhatsApp: '+1(212)555-XXXX',
+                    date: 'April 12, 2026',
+                    status: 'connected',
+                    story: 'A long-distance love story that started with a simple "hello" on ClassyDate. Now planning their wedding.'
+                },
+                { 
+                    partner1: 'Joseph Kiprop', partner2: 'Martha Chepkirui',
+                    p1Age: 34, p2Age: 30,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-713-XXX-XXX', p2WhatsApp: '+254-727-XXX-XXX',
+                    date: 'April 10, 2026',
+                    status: 'connected',
+                    story: 'Both from the Rift Valley, they shared stories about their hometowns and fell in love over their cultural heritage.'
+                },
+                { 
+                    partner1: 'Simon Mwangi', partner2: 'Mary Njoki',
+                    p1Age: 28, p2Age: 24,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-702-XXX-XXX', p2WhatsApp: '+254-728-XXX-XXX',
+                    date: 'April 8, 2026',
+                    status: 'connected',
+                    story: 'A spontaneous message led to a 6-hour phone call. They haven\'t stopped talking since that day.'
+                },
+                { 
+                    partner1: 'Daniel Otieno', partner2: 'Grace Adhiambo',
+                    p1Age: 37, p2Age: 33,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 1, p2Kids: 2,
+                    p1WhatsApp: '+254-719-XXX-XXX', p2WhatsApp: '+254-725-XXX-XXX',
+                    date: 'April 5, 2026',
+                    status: 'connected',
+                    story: 'Two single parents who found love again. Their children are now best friends.'
+                },
+                { 
+                    partner1: 'Patrick Wambugu', partner2: 'Rose Muthoni',
+                    p1Age: 31, p2Age: 27,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-715-XXX-XXX', p2WhatsApp: '+254-731-XXX-XXX',
+                    date: 'April 3, 2026',
+                    status: 'connected',
+                    story: 'They bonded over their love for music and dancing. Now they teach salsa together.'
+                },
+                { 
+                    partner1: 'John Wanyoike', partner2: 'Phoebe Nyambura',
+                    p1Age: 29, p2Age: 26,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-714-XXX-XXX', p2WhatsApp: '+254-729-XXX-XXX',
+                    date: 'April 1, 2026',
+                    status: 'connected',
+                    story: 'A love story that started with a shared interest in photography. They now travel together capturing beautiful moments.'
+                },
+                { 
+                    partner1: 'Mark Kuria', partner2: 'Susan Waithera',
+                    p1Age: 33, p2Age: 29,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇺🇬 Uganda',
+                    p1Kids: 1, p2Kids: 0,
+                    p1WhatsApp: '+254-718-XXX-XXX', p2WhatsApp: '+256-701-XXX-XXX',
+                    date: 'April 28, 2026',
+                    status: 'connected',
+                    story: 'Their love for cooking brought them together. They now run a small food blog together.'
+                },
+                { 
+                    partner1: 'Timothy Kinyua', partner2: 'Karen Wanjiku',
+                    p1Age: 30, p2Age: 28,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-700-XXX-XXX', p2WhatsApp: '+254-726-XXX-XXX',
+                    date: 'April 26, 2026',
+                    status: 'connected',
+                    story: 'They realized they both volunteer at the same children\'s home. Their shared compassion brought them closer.'
+                },
+                { 
+                    partner1: 'Fredrick Kiprono', partner2: 'Sarah Chelangat',
+                    p1Age: 32, p2Age: 28,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-708-XXX-XXX', p2WhatsApp: '+254-730-XXX-XXX',
+                    date: 'April 24, 2026',
+                    status: 'connected',
+                    story: 'A shared love for adventure and outdoor activities brought them together. They now explore national parks together.'
+                },
+                { 
+                    partner1: 'Collins Nyamweya', partner2: 'Irene Kemunto',
+                    p1Age: 29, p2Age: 26,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-709-XXX-XXX', p2WhatsApp: '+254-732-XXX-XXX',
+                    date: 'April 23, 2026',
+                    status: 'connected',
+                    story: 'A beautiful love story that started with a shared interest in African music and culture.'
+                },
+                { 
+                    partner1: 'Evans Mwangi', partner2: 'Sarah Njeri',
+                    p1Age: 31, p2Age: 27,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-717-XXX-XXX', p2WhatsApp: '+254-734-XXX-XXX',
+                    date: 'April 21, 2026',
+                    status: 'connected',
+                    story: 'Love found them in the most unexpected way. A simple swipe led to a lifetime of happiness.'
+                }
+            ],
+            'March 2026': [
+                { 
+                    partner1: 'Caleb Mwangi', partner2: 'Faith Wambui',
+                    p1Age: 35, p2Age: 30,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 2, p2Kids: 1,
+                    p1WhatsApp: '+254-701-XXX-XXX', p2WhatsApp: '+254-735-XXX-XXX',
+                    date: 'March 30, 2026',
+                    status: 'connected',
+                    story: 'Two hearts, one beautiful love story. Caleb and Faith found each other on ClassyDate and never looked back.'
+                },
+                { 
+                    partner1: 'Victor Ochieng', partner2: 'Christine Adhiambo',
+                    p1Age: 32, p2Age: 28,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-703-XXX-XXX', p2WhatsApp: '+254-736-XXX-XXX',
+                    date: 'March 28, 2026',
+                    status: 'connected',
+                    story: 'They connected over their love for reggae music and African culture. Now they attend every local music festival together.'
+                },
+                { 
+                    partner1: 'Hillary Kipchumba', partner2: 'Joy Chepkoech',
+                    p1Age: 34, p2Age: 31,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 1, p2Kids: 0,
+                    p1WhatsApp: '+254-704-XXX-XXX', p2WhatsApp: '+254-737-XXX-XXX',
+                    date: 'March 25, 2026',
+                    status: 'connected',
+                    story: 'A long-distance relationship that started on ClassyDate. They met in person and knew instantly they were meant for each other.'
+                },
+                { 
+                    partner1: 'Collins Nyamweya', partner2: 'Irene Kemunto',
+                    p1Age: 29, p2Age: 26,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-705-XXX-XXX', p2WhatsApp: '+254-738-XXX-XXX',
+                    date: 'March 22, 2026',
+                    status: 'connected',
+                    story: 'They discovered they both loved reading African literature. Their first date was at a local bookstore café.'
+                },
+                { 
+                    partner1: 'Evans Mwangi', partner2: 'Sarah Njeri',
+                    p1Age: 31, p2Age: 27,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-706-XXX-XXX', p2WhatsApp: '+254-739-XXX-XXX',
+                    date: 'March 20, 2026',
+                    status: 'connected',
+                    story: 'Love found them in the most unexpected way. A simple swipe led to a lifetime of happiness.'
+                },
+                { 
+                    partner1: 'Peter Gathogo', partner2: 'Grace Wanjiru',
+                    p1Age: 33, p2Age: 29,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 1, p2Kids: 1,
+                    p1WhatsApp: '+254-707-XXX-XXX', p2WhatsApp: '+254-740-XXX-XXX',
+                    date: 'March 18, 2026',
+                    status: 'connected',
+                    story: 'Two single parents who found love and built a beautiful blended family.'
+                },
+                { 
+                    partner1: 'Michael Omondi', partner2: 'Mercy Akinyi',
+                    p1Age: 30, p2Age: 26,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-708-XXX-XXX', p2WhatsApp: '+254-741-XXX-XXX',
+                    date: 'March 15, 2026',
+                    status: 'connected',
+                    story: 'Their love story began with a shared interest in cooking. They now have a YouTube channel together.'
+                },
+                { 
+                    partner1: 'Johnstone Ngige', partner2: 'Elizabeth Wambui',
+                    p1Age: 36, p2Age: 32,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 2, p2Kids: 0,
+                    p1WhatsApp: '+254-709-XXX-XXX', p2WhatsApp: '+254-742-XXX-XXX',
+                    date: 'March 12, 2026',
+                    status: 'connected',
+                    story: 'A beautiful love story that started with a simple "hello". Now they are planning their future together.'
+                },
+                { 
+                    partner1: 'Nicholas Okoth', partner2: 'Rose Auma',
+                    p1Age: 28, p2Age: 25,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-710-XXX-XXX', p2WhatsApp: '+254-743-XXX-XXX',
+                    date: 'March 10, 2026',
+                    status: 'connected',
+                    story: 'Their love for sports brought them together. They now play tennis together every weekend.'
+                },
+                { 
+                    partner1: 'Samuel Mwangi', partner2: 'Faith Wanja',
+                    p1Age: 34, p2Age: 30,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 1, p2Kids: 0,
+                    p1WhatsApp: '+254-711-XXX-XXX', p2WhatsApp: '+254-744-XXX-XXX',
+                    date: 'March 8, 2026',
+                    status: 'connected',
+                    story: 'They connected over their shared love for nature and hiking. Their first date was a hike to Ngong Hills.'
+                },
+                { 
+                    partner1: 'George Kamau', partner2: 'Catherine Njeri',
+                    p1Age: 31, p2Age: 27,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-712-XXX-XXX', p2WhatsApp: '+254-745-XXX-XXX',
+                    date: 'March 5, 2026',
+                    status: 'connected',
+                    story: 'A love story that blossomed from a shared interest in photography. They now capture beautiful moments together.'
+                }
+            ],
+            'February 2026': [
+                { 
+                    partner1: 'Jackson Mutua', partner2: 'Mildred Kavindu',
+                    p1Age: 33, p2Age: 29,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 2, p2Kids: 1,
+                    p1WhatsApp: '+254-713-XXX-XXX', p2WhatsApp: '+254-746-XXX-XXX',
+                    date: 'February 28, 2026',
+                    status: 'connected',
+                    story: 'Their love story is a testament to the power of online connections. They found true love on ClassyDate.'
+                },
+                { 
+                    partner1: 'Moses Kiprop', partner2: 'Dorcas Chebet',
+                    p1Age: 30, p2Age: 26,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-714-XXX-XXX', p2WhatsApp: '+254-747-XXX-XXX',
+                    date: 'February 25, 2026',
+                    status: 'connected',
+                    story: 'A shared love for fitness and a healthy lifestyle brought them together. They now run together every morning.'
+                },
+                { 
+                    partner1: 'David Njuguna', partner2: 'Margaret Wanjiru',
+                    p1Age: 32, p2Age: 28,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 1, p2Kids: 0,
+                    p1WhatsApp: '+254-715-XXX-XXX', p2WhatsApp: '+254-748-XXX-XXX',
+                    date: 'February 22, 2026',
+                    status: 'connected',
+                    story: 'They found love after heartbreak. A beautiful story of second chances on ClassyDate.'
+                },
+                { 
+                    partner1: 'Oscar Mwangi', partner2: 'Jemimah Njeri',
+                    p1Age: 29, p2Age: 25,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-716-XXX-XXX', p2WhatsApp: '+254-749-XXX-XXX',
+                    date: 'February 20, 2026',
+                    status: 'connected',
+                    story: 'A love story that started with a shared interest in music and dancing. They now attend every concert together.'
+                },
+                { 
+                    partner1: 'Samuel Ndungu', partner2: 'Grace Wanjiru',
+                    p1Age: 35, p2Age: 31,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 2, p2Kids: 1,
+                    p1WhatsApp: '+254-717-XXX-XXX', p2WhatsApp: '+254-750-XXX-XXX',
+                    date: 'February 18, 2026',
+                    status: 'connected',
+                    story: 'Two hearts, one beautiful journey. They found love and companionship on ClassyDate.'
+                },
+                { 
+                    partner1: 'Michael Odhiambo', partner2: 'Sarah Akinyi',
+                    p1Age: 31, p2Age: 27,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-718-XXX-XXX', p2WhatsApp: '+254-751-XXX-XXX',
+                    date: 'February 15, 2026',
+                    status: 'connected',
+                    story: 'A beautiful love story that began with a simple message. They are now planning their future together.'
+                }
+            ],
+            'January 2026': [
+                { 
+                    partner1: 'Stephen Mwangi', partner2: 'Nancy Wanjiru',
+                    p1Age: 34, p2Age: 30,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 1, p2Kids: 0,
+                    p1WhatsApp: '+254-719-XXX-XXX', p2WhatsApp: '+254-752-XXX-XXX',
+                    date: 'January 30, 2026',
+                    status: 'connected',
+                    story: 'They found love on ClassyDate and their journey has been nothing short of beautiful.'
+                },
+                { 
+                    partner1: 'Vincent Okoth', partner2: 'Christine Auma',
+                    p1Age: 32, p2Age: 28,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-720-XXX-XXX', p2WhatsApp: '+254-753-XXX-XXX',
+                    date: 'January 28, 2026',
+                    status: 'connected',
+                    story: 'A shared love for adventure and travel brought them together. They now explore the world together.'
+                },
+                { 
+                    partner1: 'Fredrick Kiprono', partner2: 'Mary Chelangat',
+                    p1Age: 36, p2Age: 32,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 2, p2Kids: 1,
+                    p1WhatsApp: '+254-721-XXX-XXX', p2WhatsApp: '+254-754-XXX-XXX',
+                    date: 'January 25, 2026',
+                    status: 'connected',
+                    story: 'A beautiful story of two single parents who found love and built a beautiful family together.'
+                },
+                { 
+                    partner1: 'George Omondi', partner2: 'Grace Adhiambo',
+                    p1Age: 30, p2Age: 26,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-722-XXX-XXX', p2WhatsApp: '+254-755-XXX-XXX',
+                    date: 'January 22, 2026',
+                    status: 'connected',
+                    story: 'Their love for cooking and food brought them together. They now own a small restaurant together.'
+                },
+                { 
+                    partner1: 'David Kamau', partner2: 'Elizabeth Wanjiku',
+                    p1Age: 33, p2Age: 29,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 1, p2Kids: 0,
+                    p1WhatsApp: '+254-723-XXX-XXX', p2WhatsApp: '+254-756-XXX-XXX',
+                    date: 'January 20, 2026',
+                    status: 'connected',
+                    story: 'A love story that started with a shared interest in reading and books. They now run a book club together.'
+                },
+                { 
+                    partner1: 'Michael Kiplagat', partner2: 'Sarah Chepkoech',
+                    p1Age: 31, p2Age: 27,
+                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Kids: 0, p2Kids: 0,
+                    p1WhatsApp: '+254-724-XXX-XXX', p2WhatsApp: '+254-757-XXX-XXX',
+                    date: 'January 18, 2026',
+                    status: 'connected',
+                    story: 'They found love through a shared love for sports. They now play soccer together every weekend.'
+                }
+            ]
+        };
+
+        // ============================================================
+        // NEXT MONTH MEETING DATA - 23 MEMBERS
+        // ============================================================
+        const nextMonthMembers = [
+            { partner1: 'Samuel Mwangi', partner2: 'Ruth Njeri', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'May 10, 2026' },
+            { partner1: 'Peter Gathogo', partner2: 'Grace Wanjiru', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'May 12, 2026' },
+            { partner1: 'Joseph Kiprop', partner2: 'Martha Chepkirui', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'May 15, 2026' },
+            { partner1: 'Daniel Otieno', partner2: 'Grace Adhiambo', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'May 18, 2026' },
+            { partner1: 'Michael Omondi', partner2: 'Mercy Akinyi', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'May 20, 2026' },
+            { partner1: 'Collins Nyamweya', partner2: 'Irene Kemunto', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'May 22, 2026' },
+            { partner1: 'Evans Mwangi', partner2: 'Sarah Njeri', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'May 25, 2026' },
+            { partner1: 'Fredrick Kiprono', partner2: 'Sarah Chelangat', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'May 27, 2026' },
+            { partner1: 'Timothy Kinyua', partner2: 'Karen Wanjiku', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'May 29, 2026' },
+            { partner1: 'Mark Kuria', partner2: 'Susan Waithera', p1Country: '🇰🇪 Kenya', p2Country: '🇺🇬 Uganda', meetingDate: 'June 1, 2026' },
+            { partner1: 'George Kamau', partner2: 'Catherine Njeri', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'June 3, 2026' },
+            { partner1: 'John Wanyoike', partner2: 'Phoebe Nyambura', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'June 5, 2026' },
+            { partner1: 'Patrick Wambugu', partner2: 'Rose Muthoni', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'June 8, 2026' },
+            { partner1: 'Simon Mwangi', partner2: 'Mary Njoki', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'June 10, 2026' },
+            { partner1: 'Nicholas Okoth', partner2: 'Rose Auma', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'June 12, 2026' },
+            { partner1: 'Moses Kiprop', partner2: 'Dorcas Chebet', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'June 15, 2026' },
+            { partner1: 'Oscar Mwangi', partner2: 'Jemimah Njeri', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'June 18, 2026' },
+            { partner1: 'David Njuguna', partner2: 'Margaret Wanjiru', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'June 20, 2026' },
+            { partner1: 'Jackson Mutua', partner2: 'Mildred Kavindu', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'June 22, 2026' },
+            { partner1: 'Robert Njoroge', partner2: 'Jane Wairimu', p1Country: '🇰🇪 Kenya', p2Country: '🇺🇸 USA', meetingDate: 'June 25, 2026' },
+            { partner1: 'David Mwangi', partner2: 'Grace Wanjiru', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'June 27, 2026' },
+            { partner1: 'James Ochieng', partner2: 'Sarah Akinyi', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'June 29, 2026' },
+            { partner1: 'Michael Kiplagat', partner2: 'Sarah Chepkoech', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'July 1, 2026' }
+        ];
+
+        // Upcoming meetings data (this week)
+        const upcomingMeetings = [
+            { 
+                partner1: 'Samuel Mwangi', 
+                partner2: 'Ruth Njeri',
+                p1Country: '🇰🇪 Kenya', 
+                p2Country: '🇰🇪 Kenya',
+                date: 'March 10, 2026',
+                time: '3:00 PM EAT',
+                story: 'Samuel and Ruth connected over their love for travel and adventure. They are planning their first date at a local nature park.'
+            },
+            { 
+                partner1: 'Peter Gathogo', 
+                partner2: 'Grace Wanjiru',
+                p1Country: '🇰🇪 Kenya', 
+                p2Country: '🇰🇪 Kenya',
+                date: 'March 12, 2026',
+                time: '5:00 PM EAT',
+                story: 'Peter and Grace bonded over their shared love for music and dancing. They are excited to meet in person for the first time.'
+            },
+            { 
+                partner1: 'Joseph Kiprop', 
+                partner2: 'Martha Chepkirui',
+                p1Country: '🇰🇪 Kenya', 
+                p2Country: '🇰🇪 Kenya',
+                date: 'March 15, 2026',
+                time: '2:00 PM EAT',
+                story: 'Joseph and Martha have been talking for weeks and are finally meeting. They share a love for hiking and nature.'
+            }
+        ];
+
+        // ============================================================
+        // RENDER CONNECTIONS
+        // ============================================================
+        function renderConnections() {
+            const container = document.getElementById('connections-container');
+            let totalCouples = 0;
+            let countries = new Set();
+            let monthlyCounts = [];
+
+            let html = '';
+
+            Object.keys(connectionsData).forEach((month, index) => {
+                const couples = connectionsData[month];
+                totalCouples += couples.length;
+                monthlyCounts.push(couples.length);
+
+                couples.forEach(c => {
+                    countries.add(c.p1Country);
+                    countries.add(c.p2Country);
+                });
+
+                html += `
+                    <div class="month-section">
+                        <div class="month-header">
+                            <span class="month-icon">${getMonthIcon(month)}</span>
+                            <h2>${month}</h2>
+                            <span class="count">${couples.length} couples</span>
+                        </div>
+                        <div class="couples-grid">
+                `;
+
+                couples.forEach((couple, idx) => {
+                    const statusText = couple.status === 'connected' ? '✅ Connected' : '💜 Connecting';
+                    const statusBadge = couple.status === 'connected' ? '✅ Connected' : '💜 In Progress';
+
+                    html += `
+                        <div class="couple-card" onclick="openModal(${index}, ${idx})">
+                            <div class="couple-card__header">
+                                <span class="names">${couple.partner1} <span style="color:#ff0000;">❤️</span> ${couple.partner2}</span>
+                                <span class="badge">${statusBadge}</span>
+                            </div>
+                            <div class="couple-card__body">
+                                <div class="partner-info">
+                                    <span class="flag">${couple.p1Country.split(' ')[0]}</span>
+                                    <span class="name">${couple.partner1}</span>
+                                    <span class="age">${couple.p1Age} yrs</span>
+                                    <span class="kids">${couple.p1Kids > 0 ? `👶 ${couple.p1Kids}` : ''}</span>
+                                    <span class="whatsapp">📱 ${couple.p1WhatsApp}</span>
+                                </div>
+                                <div class="partner-info">
+                                    <span class="flag">${couple.p2Country.split(' ')[0]}</span>
+                                    <span class="name">${couple.partner2}</span>
+                                    <span class="age">${couple.p2Age} yrs</span>
+                                    <span class="kids">${couple.p2Kids > 0 ? `👶 ${couple.p2Kids}` : ''}</span>
+                                    <span class="whatsapp">📱 ${couple.p2WhatsApp}</span>
+                                </div>
+                            </div>
+                            <div class="couple-card__footer">
+                                <span class="date">📅 ${couple.date}</span>
+                                <button class="view-btn">👀 View Details</button>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+
+            document.getElementById('total-couples').textContent = totalCouples;
+            document.getElementById('total-countries').textContent = countries.size;
+            document.getElementById('monthly-average').textContent = Math.round(monthlyCounts.reduce((a, b) => a + b, 0) / monthlyCounts.length);
+
+            renderNextMonth();
+            renderUpcomingMeetings();
+        }
+
+        // ============================================================
+        // RENDER NEXT MONTH MEETING
+        // ============================================================
+        function renderNextMonth() {
+            const grid = document.getElementById('next-month-grid');
+            document.getElementById('next-month-count').textContent = `${nextMonthMembers.length} Members`;
+
+            grid.innerHTML = nextMonthMembers.map(member => `
+                <div class="next-month-card">
+                    <div class="info">
+                        <div class="names">${member.partner1} ❤️ ${member.partner2}</div>
+                        <div class="details">${member.p1Country} · ${member.p2Country}</div>
+                        <div class="meeting-date">📅 Meeting: ${member.meetingDate}</div>
+                    </div>
+                    <span class="status-badge">📅 Upcoming</span>
+                </div>
+            `).join('');
+        }
+
+        // ============================================================
+        // GET MONTH ICON
+        // ============================================================
+        function getMonthIcon(month) {
+            const icons = {
+                'January': '❄️',
+                'February': '💕',
+                'March': '🌸',
+                'April': '🌺',
+                'May': '🌷',
+                'June': '☀️',
+                'July': '🌞',
+                'August': '🌻',
+                'September': '🍂',
+                'October': '🎃',
+                'November': '🍁',
+                'December': '🎄'
+            };
+            const monthName = month.split(' ')[0];
+            return icons[monthName] || '❤️';
+        }
+
+        // ============================================================
+        // RENDER UPCOMING MEETINGS
+        // ============================================================
+        function renderUpcomingMeetings() {
+            const grid = document.getElementById('upcoming-grid');
+            
+            if (upcomingMeetings.length === 0) {
+                grid.innerHTML = `
+                    <div style="text-align:center;padding:30px;color:rgba(26,5,51,0.3);grid-column:1/-1;">
+                        <span style="font-size:40px;">📅</span>
+                        <p style="margin-top:8px;">No upcoming meetings scheduled</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = upcomingMeetings.map(meeting => `
+                <div class="upcoming-card">
+                    <div class="info">
+                        <div class="names">${meeting.partner1} ❤️ ${meeting.partner2}</div>
+                        <div class="details">${meeting.p1Country} · ${meeting.p2Country}</div>
+                        <div class="details">📅 ${meeting.date} · ⏰ ${meeting.time}</div>
+                    </div>
+                    <button class="call-btn" onclick="initiateCall('${meeting.partner1}', '${meeting.partner2}')">📞 Call</button>
+                </div>
+            `).join('');
+        }
+
+        // ============================================================
+        // MODAL FUNCTIONS
+        // ============================================================
+        let currentCouple = null;
+
+        function openModal(monthIndex, coupleIndex) {
+            const months = Object.keys(connectionsData);
+            const month = months[monthIndex];
+            const couple = connectionsData[month][coupleIndex];
+            currentCouple = couple;
+
+            const initials1 = couple.partner1.split(' ').map(n => n[0]).join('');
+            const initials2 = couple.partner2.split(' ').map(n => n[0]).join('');
+
+            document.getElementById('modal-title').innerHTML = `${couple.partner1} <span class="heart">❤️</span> ${couple.partner2}`;
+            document.getElementById('modal-connected-date').textContent = `Connected on ${couple.date}`;
+
+            // Status
+            const statusEl = document.getElementById('modal-status');
+            if (couple.status === 'connected') {
+                statusEl.className = 'modal-status connected';
+                statusEl.textContent = '✅ Connected';
+            } else {
+                statusEl.className = 'modal-status pending';
+                statusEl.textContent = '💜 Connecting';
+            }
+
+            document.getElementById('partner1-avatar').textContent = initials1;
+            document.getElementById('partner1-name').textContent = couple.partner1;
+            document.getElementById('partner1-detail').textContent = `${couple.p1Country} · Age ${couple.p1Age}`;
+            document.getElementById('partner1-kids').textContent = couple.p1Kids > 0 ? `👶 ${couple.p1Kids} child${couple.p1Kids > 1 ? 'ren' : ''}` : '👶 No children';
+            document.getElementById('partner1-whatsapp').textContent = `📱 ${couple.p1WhatsApp}`;
+
+            document.getElementById('partner2-avatar').textContent = initials2;
+            document.getElementById('partner2-name').textContent = couple.partner2;
+            document.getElementById('partner2-detail').textContent = `${couple.p2Country} · Age ${couple.p2Age}`;
+            document.getElementById('partner2-kids').textContent = couple.p2Kids > 0 ? `👶 ${couple.p2Kids} child${couple.p2Kids > 1 ? 'ren' : ''}` : '👶 No children';
+            document.getElementById('partner2-whatsapp').textContent = `📱 ${couple.p2WhatsApp}`;
+
+            document.getElementById('modal-story').textContent = couple.story;
+
+            document.getElementById('modal-overlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('modal-overlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('modal-overlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // ============================================================
+        // ACTION FUNCTIONS
+        // ============================================================
+        function contactOnWhatsApp() {
+            if (!currentCouple) return;
+            
+            const msg = `Hello! I saw your love story on ClassyDate. ${currentCouple.partner1} ❤️ ${currentCouple.partner2} - What a beautiful connection! 💕`;
+            const number = currentCouple.p1WhatsApp.replace(/[^0-9+]/g, '');
+            
+            window.open(`https://wa.me/${number}?text=${encodeURIComponent(msg)}`, '_blank');
+            closeModal();
+        }
+
+        function shareLove() {
+            if (!currentCouple) return;
+            const message = `❤️ Love Story: ${currentCouple.partner1} & ${currentCouple.partner2} connected on ClassyDate! 📅 ${currentCouple.date}\n\n"${currentCouple.story}"\n\n#ClassyDate #LoveConnection`;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: 'ClassyDate Love Story',
+                    text: message,
+                }).catch(() => {});
+            } else {
+                navigator.clipboard.writeText(message).then(() => {
+                    showToast('📋 Love story copied to clipboard!', 'success');
+                });
+            }
+            closeModal();
+        }
+
+        function initiateCall(partner1, partner2) {
+            showToast(`📞 Initiating call with ${partner1} & ${partner2}...`, 'success');
+        }
+
+        // ============================================================
+        // TOAST
+        // ============================================================
+        let toastTimeout;
+
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = 'toast ' + type;
+            toast.classList.add('show');
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // ============================================================
+        // INIT
+        // ============================================================
+        renderConnections();
+
+        console.log('💎 ClassyDate Connections Page Loaded!');
+        console.log('❤️ Total couples:', Object.values(connectionsData).reduce((a, b) => a + b.length, 0));
+        console.log('📅 Months:', Object.keys(connectionsData).join(', '));
+        console.log('📅 Next Month Members:', nextMonthMembers.length);
+        console.log('✅ Status: Connected or In Progress (no "met" assumption)');
+        console.log('📱 WhatsApp numbers included for all members!');
+    </script>
+
+</body>
+</html>
