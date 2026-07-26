@@ -171,7 +171,7 @@
         }
 
         /* ============================================================ */
-        /* COUPLE CARDS GRID - PROFESSIONAL                            */
+        /* COUPLE CARDS GRID                                            */
         /* ============================================================ */
         .couples-grid {
             display: grid;
@@ -295,7 +295,7 @@
         }
 
         /* ============================================================ */
-        /* NEXT MONTH MEETING SECTION - NEW                            */
+        /* NEXT MONTH MEETING SECTION                                  */
         /* ============================================================ */
         .next-month-section {
             margin: 40px 0 30px;
@@ -608,6 +608,26 @@
             font-family: "Inter", sans-serif;
         }
 
+        .modal-partner .pcertificate {
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 6px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            display: inline-block;
+            font-family: "Inter", sans-serif;
+        }
+
+        .pcertificate.done {
+            background: rgba(40, 167, 69, 0.12);
+            color: #28a745;
+        }
+
+        .pcertificate.notyet {
+            background: rgba(255, 165, 0, 0.12);
+            color: #b37400;
+        }
+
         .modal-status {
             display: inline-block;
             padding: 4px 16px;
@@ -626,11 +646,6 @@
         .modal-status.pending {
             background: rgba(255, 193, 7, 0.12);
             color: #b8960f;
-        }
-
-        .modal-status.upcoming {
-            background: rgba(108, 60, 179, 0.12);
-            color: #6c3cb3;
         }
 
         .modal-story {
@@ -883,7 +898,7 @@
         </div>
 
         <!-- ============================================================ -->
-        <!-- NEXT MONTH MEETING SECTION - NEW                            -->
+        <!-- NEXT MONTH MEETING SECTION                                  -->
         <!-- ============================================================ -->
         <div class="next-month-section" id="next-month-section">
             <div class="header">
@@ -907,7 +922,7 @@
         <div class="upcoming-section" id="upcoming-section">
             <div class="header">
                 <span class="icon">🗓️</span>
-                <h2>This Week's Meetings</h2>
+                <h2>Upcoming Meetings (August 25, 2026)</h2>
             </div>
             <div class="upcoming-grid" id="upcoming-grid">
                 <!-- Rendered by JavaScript -->
@@ -935,6 +950,7 @@
                     <div class="pdetail" id="partner1-detail">🇺🇸 United States · Age 34</div>
                     <div class="pkids" id="partner1-kids">👶 1 child</div>
                     <div class="pwhatsapp" id="partner1-whatsapp">📱 +1(580)502-XXXX</div>
+                    <div class="pcertificate done" id="partner1-cert">✅ Certificate Fee: Done</div>
                 </div>
                 <div class="modal-partner">
                     <div class="avatar" id="partner2-avatar">MN</div>
@@ -942,6 +958,7 @@
                     <div class="pdetail" id="partner2-detail">🇺🇬 Uganda · Age 23</div>
                     <div class="pkids" id="partner2-kids">👶 2 children</div>
                     <div class="pwhatsapp" id="partner2-whatsapp">📱 +256-7030-XXXX</div>
+                    <div class="pcertificate notyet" id="partner2-cert">⏳ Certificate Fee: Not Yet</div>
                 </div>
             </div>
 
@@ -967,7 +984,7 @@
     <!-- ============================================================ -->
     <script>
         // ============================================================
-        // DATA - 15+ COUPLES PER MONTH
+        // DATA - 15+ COUPLES PER MONTH WITH DIVERSE NAMES
         // ============================================================
         const connectionsData = {
             'April 2026': [
@@ -977,36 +994,40 @@
                     p1Country: '🇺🇸 United States', p2Country: '🇺🇬 Uganda',
                     p1Kids: 1, p2Kids: 2,
                     p1WhatsApp: '+1(580)502-XXXX', p2WhatsApp: '+256-7030-XXXX',
+                    p1Cert: 'done', p2Cert: 'notyet',
                     date: 'April 29, 2026',
                     status: 'connected',
                     story: 'They met through ClassyDate and instantly connected over their love for travel and family. After weeks of meaningful conversations, they are planning to meet in person.'
                 },
                 { 
-                    partner1: 'James Ochieng', partner2: 'Sarah Akinyi',
+                    partner1: 'James Anderson', partner2: 'Sarah Akinyi',
                     p1Age: 32, p2Age: 28,
-                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Country: '🇬🇧 United Kingdom', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 1,
-                    p1WhatsApp: '+254-712-XXX-XXX', p2WhatsApp: '+254-723-XXX-XXX',
+                    p1WhatsApp: '+44-7700-XXX-XXX', p2WhatsApp: '+254-723-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 27, 2026',
                     status: 'connected',
                     story: 'James and Sarah discovered they grew up in the same neighborhood. Their shared memories of the old town brought them closer together.'
                 },
                 { 
-                    partner1: 'David Mwangi', partner2: 'Grace Wanjiru',
+                    partner1: 'David Williams', partner2: 'Grace Wanjiru',
                     p1Age: 35, p2Age: 30,
-                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Country: '🇨🇦 Canada', p2Country: '🇰🇪 Kenya',
                     p1Kids: 2, p2Kids: 0,
-                    p1WhatsApp: '+254-720-XXX-XXX', p2WhatsApp: '+254-733-XXX-XXX',
+                    p1WhatsApp: '+1(416)555-XXXX', p2WhatsApp: '+254-733-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 25, 2026',
                     status: 'connected',
                     story: 'A love for coffee and long walks brought David and Grace together. They now run a small coffee shop together.'
                 },
                 { 
-                    partner1: 'Michael Kariuki', partner2: 'Esther Njeri',
+                    partner1: 'Michael Thompson', partner2: 'Esther Njeri',
                     p1Age: 29, p2Age: 26,
-                    p1Country: '🇰🇪 Kenya', p2Country: '🇺🇬 Uganda',
+                    p1Country: '🇦🇺 Australia', p2Country: '🇺🇬 Uganda',
                     p1Kids: 0, p2Kids: 0,
-                    p1WhatsApp: '+254-710-XXX-XXX', p2WhatsApp: '+256-702-XXX-XXX',
+                    p1WhatsApp: '+61-400-XXX-XXX', p2WhatsApp: '+256-702-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 22, 2026',
                     status: 'connected',
                     story: 'Long-distance never stopped them. Michael and Esther video-called every day for 3 months before meeting in person.'
@@ -1017,6 +1038,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 1, p2Kids: 0,
                     p1WhatsApp: '+254-798-XXX-XXX', p2WhatsApp: '+254-722-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 20, 2026',
                     status: 'connected',
                     story: 'They met at a local community event and realized they had been matched on ClassyDate weeks earlier. It was fate.'
@@ -1027,16 +1049,18 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇹🇿 Tanzania',
                     p1Kids: 0, p2Kids: 1,
                     p1WhatsApp: '+254-716-XXX-XXX', p2WhatsApp: '+255-712-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 18, 2026',
                     status: 'connected',
                     story: 'A shared love for African literature brought them together. They now read to each other every night.'
                 },
                 { 
-                    partner1: 'Thomas Mwangi', partner2: 'Lilian Wanjiru',
+                    partner1: 'Thomas Brown', partner2: 'Lilian Wanjiru',
                     p1Age: 30, p2Age: 25,
-                    p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
+                    p1Country: '🇳🇿 New Zealand', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
-                    p1WhatsApp: '+254-711-XXX-XXX', p2WhatsApp: '+254-724-XXX-XXX',
+                    p1WhatsApp: '+64-21-XXX-XXX', p2WhatsApp: '+254-724-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 15, 2026',
                     status: 'connected',
                     story: 'They discovered they both loved hiking and nature. Their first date was a hike up Mount Kenya.'
@@ -1047,6 +1071,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇺🇸 USA',
                     p1Kids: 2, p2Kids: 1,
                     p1WhatsApp: '+254-721-XXX-XXX', p2WhatsApp: '+1(212)555-XXXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 12, 2026',
                     status: 'connected',
                     story: 'A long-distance love story that started with a simple "hello" on ClassyDate. Now planning their wedding.'
@@ -1057,6 +1082,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-713-XXX-XXX', p2WhatsApp: '+254-727-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 10, 2026',
                     status: 'connected',
                     story: 'Both from the Rift Valley, they shared stories about their hometowns and fell in love over their cultural heritage.'
@@ -1067,6 +1093,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-702-XXX-XXX', p2WhatsApp: '+254-728-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 8, 2026',
                     status: 'connected',
                     story: 'A spontaneous message led to a 6-hour phone call. They haven\'t stopped talking since that day.'
@@ -1077,6 +1104,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 1, p2Kids: 2,
                     p1WhatsApp: '+254-719-XXX-XXX', p2WhatsApp: '+254-725-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 5, 2026',
                     status: 'connected',
                     story: 'Two single parents who found love again. Their children are now best friends.'
@@ -1087,6 +1115,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-715-XXX-XXX', p2WhatsApp: '+254-731-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 3, 2026',
                     status: 'connected',
                     story: 'They bonded over their love for music and dancing. Now they teach salsa together.'
@@ -1097,6 +1126,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-714-XXX-XXX', p2WhatsApp: '+254-729-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 1, 2026',
                     status: 'connected',
                     story: 'A love story that started with a shared interest in photography. They now travel together capturing beautiful moments.'
@@ -1107,6 +1137,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇺🇬 Uganda',
                     p1Kids: 1, p2Kids: 0,
                     p1WhatsApp: '+254-718-XXX-XXX', p2WhatsApp: '+256-701-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 28, 2026',
                     status: 'connected',
                     story: 'Their love for cooking brought them together. They now run a small food blog together.'
@@ -1117,6 +1148,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-700-XXX-XXX', p2WhatsApp: '+254-726-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 26, 2026',
                     status: 'connected',
                     story: 'They realized they both volunteer at the same children\'s home. Their shared compassion brought them closer.'
@@ -1127,6 +1159,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-708-XXX-XXX', p2WhatsApp: '+254-730-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 24, 2026',
                     status: 'connected',
                     story: 'A shared love for adventure and outdoor activities brought them together. They now explore national parks together.'
@@ -1137,6 +1170,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-709-XXX-XXX', p2WhatsApp: '+254-732-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 23, 2026',
                     status: 'connected',
                     story: 'A beautiful love story that started with a shared interest in African music and culture.'
@@ -1147,6 +1181,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-717-XXX-XXX', p2WhatsApp: '+254-734-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 21, 2026',
                     status: 'connected',
                     story: 'Love found them in the most unexpected way. A simple swipe led to a lifetime of happiness.'
@@ -1159,6 +1194,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 2, p2Kids: 1,
                     p1WhatsApp: '+254-701-XXX-XXX', p2WhatsApp: '+254-735-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'March 30, 2026',
                     status: 'connected',
                     story: 'Two hearts, one beautiful love story. Caleb and Faith found each other on ClassyDate and never looked back.'
@@ -1169,6 +1205,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-703-XXX-XXX', p2WhatsApp: '+254-736-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'March 28, 2026',
                     status: 'connected',
                     story: 'They connected over their love for reggae music and African culture. Now they attend every local music festival together.'
@@ -1179,6 +1216,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 1, p2Kids: 0,
                     p1WhatsApp: '+254-704-XXX-XXX', p2WhatsApp: '+254-737-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'March 25, 2026',
                     status: 'connected',
                     story: 'A long-distance relationship that started on ClassyDate. They met in person and knew instantly they were meant for each other.'
@@ -1189,6 +1227,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-705-XXX-XXX', p2WhatsApp: '+254-738-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'March 22, 2026',
                     status: 'connected',
                     story: 'They discovered they both loved reading African literature. Their first date was at a local bookstore café.'
@@ -1199,6 +1238,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-706-XXX-XXX', p2WhatsApp: '+254-739-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'March 20, 2026',
                     status: 'connected',
                     story: 'Love found them in the most unexpected way. A simple swipe led to a lifetime of happiness.'
@@ -1209,6 +1249,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 1, p2Kids: 1,
                     p1WhatsApp: '+254-707-XXX-XXX', p2WhatsApp: '+254-740-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'March 18, 2026',
                     status: 'connected',
                     story: 'Two single parents who found love and built a beautiful blended family.'
@@ -1219,6 +1260,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-708-XXX-XXX', p2WhatsApp: '+254-741-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'March 15, 2026',
                     status: 'connected',
                     story: 'Their love story began with a shared interest in cooking. They now have a YouTube channel together.'
@@ -1229,6 +1271,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 2, p2Kids: 0,
                     p1WhatsApp: '+254-709-XXX-XXX', p2WhatsApp: '+254-742-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'March 12, 2026',
                     status: 'connected',
                     story: 'A beautiful love story that started with a simple "hello". Now they are planning their future together.'
@@ -1239,6 +1282,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-710-XXX-XXX', p2WhatsApp: '+254-743-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'March 10, 2026',
                     status: 'connected',
                     story: 'Their love for sports brought them together. They now play tennis together every weekend.'
@@ -1249,6 +1293,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 1, p2Kids: 0,
                     p1WhatsApp: '+254-711-XXX-XXX', p2WhatsApp: '+254-744-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'March 8, 2026',
                     status: 'connected',
                     story: 'They connected over their shared love for nature and hiking. Their first date was a hike to Ngong Hills.'
@@ -1259,6 +1304,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-712-XXX-XXX', p2WhatsApp: '+254-745-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'March 5, 2026',
                     status: 'connected',
                     story: 'A love story that blossomed from a shared interest in photography. They now capture beautiful moments together.'
@@ -1271,6 +1317,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 2, p2Kids: 1,
                     p1WhatsApp: '+254-713-XXX-XXX', p2WhatsApp: '+254-746-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'February 28, 2026',
                     status: 'connected',
                     story: 'Their love story is a testament to the power of online connections. They found true love on ClassyDate.'
@@ -1281,6 +1328,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-714-XXX-XXX', p2WhatsApp: '+254-747-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'February 25, 2026',
                     status: 'connected',
                     story: 'A shared love for fitness and a healthy lifestyle brought them together. They now run together every morning.'
@@ -1291,6 +1339,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 1, p2Kids: 0,
                     p1WhatsApp: '+254-715-XXX-XXX', p2WhatsApp: '+254-748-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'February 22, 2026',
                     status: 'connected',
                     story: 'They found love after heartbreak. A beautiful story of second chances on ClassyDate.'
@@ -1301,6 +1350,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-716-XXX-XXX', p2WhatsApp: '+254-749-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'February 20, 2026',
                     status: 'connected',
                     story: 'A love story that started with a shared interest in music and dancing. They now attend every concert together.'
@@ -1311,6 +1361,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 2, p2Kids: 1,
                     p1WhatsApp: '+254-717-XXX-XXX', p2WhatsApp: '+254-750-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'February 18, 2026',
                     status: 'connected',
                     story: 'Two hearts, one beautiful journey. They found love and companionship on ClassyDate.'
@@ -1321,6 +1372,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-718-XXX-XXX', p2WhatsApp: '+254-751-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'February 15, 2026',
                     status: 'connected',
                     story: 'A beautiful love story that began with a simple message. They are now planning their future together.'
@@ -1333,6 +1385,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 1, p2Kids: 0,
                     p1WhatsApp: '+254-719-XXX-XXX', p2WhatsApp: '+254-752-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'January 30, 2026',
                     status: 'connected',
                     story: 'They found love on ClassyDate and their journey has been nothing short of beautiful.'
@@ -1343,6 +1396,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-720-XXX-XXX', p2WhatsApp: '+254-753-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'January 28, 2026',
                     status: 'connected',
                     story: 'A shared love for adventure and travel brought them together. They now explore the world together.'
@@ -1353,6 +1407,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 2, p2Kids: 1,
                     p1WhatsApp: '+254-721-XXX-XXX', p2WhatsApp: '+254-754-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'January 25, 2026',
                     status: 'connected',
                     story: 'A beautiful story of two single parents who found love and built a beautiful family together.'
@@ -1363,6 +1418,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-722-XXX-XXX', p2WhatsApp: '+254-755-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'January 22, 2026',
                     status: 'connected',
                     story: 'Their love for cooking and food brought them together. They now own a small restaurant together.'
@@ -1373,6 +1429,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 1, p2Kids: 0,
                     p1WhatsApp: '+254-723-XXX-XXX', p2WhatsApp: '+254-756-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'January 20, 2026',
                     status: 'connected',
                     story: 'A love story that started with a shared interest in reading and books. They now run a book club together.'
@@ -1383,6 +1440,7 @@
                     p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya',
                     p1Kids: 0, p2Kids: 0,
                     p1WhatsApp: '+254-724-XXX-XXX', p2WhatsApp: '+254-757-XXX-XXX',
+                    p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'January 18, 2026',
                     status: 'connected',
                     story: 'They found love through a shared love for sports. They now play soccer together every weekend.'
@@ -1419,34 +1477,34 @@
             { partner1: 'Michael Kiplagat', partner2: 'Sarah Chepkoech', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'July 1, 2026' }
         ];
 
-        // Upcoming meetings data (this week)
+        // Upcoming meetings data (August 25, 2026)
         const upcomingMeetings = [
             { 
-                partner1: 'Samuel Mwangi', 
-                partner2: 'Ruth Njeri',
-                p1Country: '🇰🇪 Kenya', 
-                p2Country: '🇰🇪 Kenya',
-                date: 'March 10, 2026',
+                partner1: 'George Marcus', 
+                partner2: 'Mary Nyambaga',
+                p1Country: '🇺🇸 USA', 
+                p2Country: '🇺🇬 Uganda',
+                date: 'August 25, 2026',
                 time: '3:00 PM EAT',
-                story: 'Samuel and Ruth connected over their love for travel and adventure. They are planning their first date at a local nature park.'
+                story: 'George and Mary are finally meeting in person after months of connecting online. They are excited to take their relationship to the next level.'
             },
             { 
-                partner1: 'Peter Gathogo', 
-                partner2: 'Grace Wanjiru',
-                p1Country: '🇰🇪 Kenya', 
+                partner1: 'James Anderson', 
+                partner2: 'Sarah Akinyi',
+                p1Country: '🇬🇧 UK', 
                 p2Country: '🇰🇪 Kenya',
-                date: 'March 12, 2026',
+                date: 'August 25, 2026',
                 time: '5:00 PM EAT',
-                story: 'Peter and Grace bonded over their shared love for music and dancing. They are excited to meet in person for the first time.'
+                story: 'James is flying from London to meet Sarah. They have been video calling daily and can\'t wait to finally be together.'
             },
             { 
-                partner1: 'Joseph Kiprop', 
-                partner2: 'Martha Chepkirui',
-                p1Country: '🇰🇪 Kenya', 
+                partner1: 'David Williams', 
+                partner2: 'Grace Wanjiru',
+                p1Country: '🇨🇦 Canada', 
                 p2Country: '🇰🇪 Kenya',
-                date: 'March 15, 2026',
+                date: 'August 25, 2026',
                 time: '2:00 PM EAT',
-                story: 'Joseph and Martha have been talking for weeks and are finally meeting. They share a love for hiking and nature.'
+                story: 'David and Grace have been planning this meeting for months. They are both nervous and excited to finally meet in person.'
             }
         ];
 
@@ -1483,13 +1541,12 @@
 
                 couples.forEach((couple, idx) => {
                     const statusText = couple.status === 'connected' ? '✅ Connected' : '💜 Connecting';
-                    const statusBadge = couple.status === 'connected' ? '✅ Connected' : '💜 In Progress';
 
                     html += `
                         <div class="couple-card" onclick="openModal(${index}, ${idx})">
                             <div class="couple-card__header">
                                 <span class="names">${couple.partner1} <span style="color:#ff0000;">❤️</span> ${couple.partner2}</span>
-                                <span class="badge">${statusBadge}</span>
+                                <span class="badge">${statusText}</span>
                             </div>
                             <div class="couple-card__body">
                                 <div class="partner-info">
@@ -1573,7 +1630,7 @@
         }
 
         // ============================================================
-        // RENDER UPCOMING MEETINGS
+        // RENDER UPCOMING MEETINGS (August 25, 2026)
         // ============================================================
         function renderUpcomingMeetings() {
             const grid = document.getElementById('upcoming-grid');
@@ -1632,12 +1689,32 @@
             document.getElementById('partner1-detail').textContent = `${couple.p1Country} · Age ${couple.p1Age}`;
             document.getElementById('partner1-kids').textContent = couple.p1Kids > 0 ? `👶 ${couple.p1Kids} child${couple.p1Kids > 1 ? 'ren' : ''}` : '👶 No children';
             document.getElementById('partner1-whatsapp').textContent = `📱 ${couple.p1WhatsApp}`;
+            
+            // Certificate status for partner 1
+            const cert1 = document.getElementById('partner1-cert');
+            if (couple.p1Cert === 'done') {
+                cert1.className = 'pcertificate done';
+                cert1.textContent = '✅ Certificate Fee: Done';
+            } else {
+                cert1.className = 'pcertificate notyet';
+                cert1.textContent = '⏳ Certificate Fee: Not Yet';
+            }
 
             document.getElementById('partner2-avatar').textContent = initials2;
             document.getElementById('partner2-name').textContent = couple.partner2;
             document.getElementById('partner2-detail').textContent = `${couple.p2Country} · Age ${couple.p2Age}`;
             document.getElementById('partner2-kids').textContent = couple.p2Kids > 0 ? `👶 ${couple.p2Kids} child${couple.p2Kids > 1 ? 'ren' : ''}` : '👶 No children';
             document.getElementById('partner2-whatsapp').textContent = `📱 ${couple.p2WhatsApp}`;
+            
+            // Certificate status for partner 2
+            const cert2 = document.getElementById('partner2-cert');
+            if (couple.p2Cert === 'done') {
+                cert2.className = 'pcertificate done';
+                cert2.textContent = '✅ Certificate Fee: Done';
+            } else {
+                cert2.className = 'pcertificate notyet';
+                cert2.textContent = '⏳ Certificate Fee: Not Yet';
+            }
 
             document.getElementById('modal-story').textContent = couple.story;
 
@@ -1721,7 +1798,9 @@
         console.log('❤️ Total couples:', Object.values(connectionsData).reduce((a, b) => a + b.length, 0));
         console.log('📅 Months:', Object.keys(connectionsData).join(', '));
         console.log('📅 Next Month Members:', nextMonthMembers.length);
-        console.log('✅ Status: Connected or In Progress (no "met" assumption)');
+        console.log('📅 Upcoming Meetings: August 25, 2026');
+        console.log('✅ Certificate Fee status added!');
+        console.log('✅ Diverse names (white and African) included!');
         console.log('📱 WhatsApp numbers included for all members!');
     </script>
 
