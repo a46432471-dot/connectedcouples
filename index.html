@@ -521,7 +521,6 @@
             transform: rotate(90deg);
         }
 
-        /* HEADER */
         .modal-title {
             font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
             font-size: 30px;
@@ -550,7 +549,6 @@
             font-family: "Inter", sans-serif;
         }
 
-        /* STATUS ROW */
         .modal-status-row {
             display: flex;
             justify-content: center;
@@ -593,7 +591,6 @@
             color: #b8960f;
         }
 
-        /* LOVE SPARKS */
         .love-sparks-section {
             background: linear-gradient(135deg, rgba(255, 215, 0, 0.06), rgba(255, 107, 107, 0.04));
             border-radius: 12px;
@@ -653,7 +650,6 @@
             50% { transform: scale(1.5); opacity: 0.5; }
         }
 
-        /* PARTNER CARDS */
         .modal-partners {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -754,7 +750,6 @@
             color: #b37400;
         }
 
-        /* DETAILS GRID - 3 COLUMNS (Days Together REMOVED) */
         .modal-details-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -787,11 +782,6 @@
             font-family: "Inter", sans-serif;
         }
 
-        .modal-detail-item .value .emoji {
-            font-size: 14px;
-        }
-
-        /* LOVE STORY */
         .modal-story {
             background: rgba(255, 255, 255, 0.3);
             border-radius: 12px;
@@ -828,7 +818,6 @@
             font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
         }
 
-        /* ACTION BUTTONS */
         .modal-actions {
             display: flex;
             gap: 10px;
@@ -1007,11 +996,9 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">✕</button>
             
-            <!-- HEADER -->
             <h2 class="modal-title" id="modal-title">George Marcus <span class="heart">❤️</span> Mary Nyambaga</h2>
             <p class="modal-subtitle" id="modal-connected-date">✨ Connected on April 29, 2026</p>
             
-            <!-- STATUS ROW -->
             <div class="modal-status-row" id="modal-status-row">
                 <span class="modal-status connected" id="modal-status">💍 Relationship: Connected</span>
                 <span class="modal-status cert-done" id="modal-cert1">✅ George: Done</span>
@@ -1019,7 +1006,6 @@
                 <span class="modal-status love-level">🔥 Love Level: Deep Connection</span>
             </div>
 
-            <!-- LOVE SPARKS -->
             <div class="love-sparks-section" id="love-sparks-section">
                 <span class="label">🔥 Love Sparks</span>
                 <div style="display:flex;align-items:center;gap:12px;">
@@ -1034,7 +1020,6 @@
                 </div>
             </div>
 
-            <!-- PARTNERS -->
             <div class="modal-partners" id="modal-partners">
                 <div class="modal-partner">
                     <div class="avatar" id="partner1-avatar">GM</div>
@@ -1058,7 +1043,6 @@
                 </div>
             </div>
 
-            <!-- DETAILS GRID - 3 COLUMNS (Days Together REMOVED) -->
             <div class="modal-details-grid" id="modal-details-grid">
                 <div class="modal-detail-item">
                     <div class="label">💕 Connection Type</div>
@@ -1074,14 +1058,12 @@
                 </div>
             </div>
 
-            <!-- LOVE STORY -->
             <div class="modal-story">
                 <span class="label">💬 Their Love Story</span>
                 <span class="story-text" id="modal-story">George and Mary met through ClassyDate and instantly connected over their love for travel and family. After weeks of meaningful conversations, they are planning to meet in person. George is flying from the US to Uganda to finally meet Mary and her children. Their love story is a beautiful example of how distance means nothing when the heart is full of love.</span>
                 <div class="story-quote" id="modal-quote">💬 "Distance means nothing when the heart is full of love" — George &amp; Mary</div>
             </div>
 
-            <!-- ACTIONS -->
             <div class="modal-actions">
                 <button class="btn-whatsapp" onclick="contactOnWhatsApp()">💬 WhatsApp</button>
                 <button class="btn-call" onclick="initiateCall()">📞 Call</button>
@@ -1101,7 +1083,7 @@
     <!-- ============================================================ -->
     <script>
         // ============================================================
-        // DATA - FULL DATA WITH ALL FIELDS
+        // DATA
         // ============================================================
         const connectionsData = {
             'April 2026': [
@@ -1120,7 +1102,7 @@
                     statusText: 'Meeting Planned',
                     milestone: 'First Meeting',
                     sparks: '🔥🔥🔥🔥',
-                    story: 'George and Mary met through ClassyDate and instantly connected over their love for travel and family. After weeks of meaningful conversations, they are planning to meet in person. George is flying from the US to Uganda to finally meet Mary and her children. Their love story is a beautiful example of how distance means nothing when the heart is full of love.',
+                    story: 'George and Mary met through ClassyDate and instantly connected over their love for travel and family. After weeks of meaningful conversations, they are planning to meet in person. George is flying from the US to Uganda to finally meet Mary and her children.',
                     quote: '"Distance means nothing when the heart is full of love" — George & Mary'
                 },
                 { 
@@ -1138,7 +1120,7 @@
                     statusText: 'Engaged',
                     milestone: 'Wedding (2027)',
                     sparks: '🔥🔥🔥🔥🔥',
-                    story: 'James and Sarah discovered they grew up in the same neighborhood in London. Their shared memories of the old town brought them closer together. They have both completed their certificate fees and are now planning their wedding for next year. Their love story is a testament to the power of fate and ClassyDate.',
+                    story: 'James and Sarah discovered they grew up in the same neighborhood in London. Their shared memories of the old town brought them closer together. They have both completed their certificate fees and are now planning their wedding for next year.',
                     quote: '"We were destined to meet" — James & Sarah'
                 },
                 { 
@@ -1156,7 +1138,7 @@
                     statusText: 'Meeting Planned',
                     milestone: 'Coffee Shop Expansion',
                     sparks: '🔥🔥🔥🔥',
-                    story: 'A love for coffee and long walks brought David and Grace together. They now run a small coffee shop together in Nairobi. David has completed his certificate fee, Grace is working on hers. Their partnership extends beyond romance into business and shared dreams.',
+                    story: 'A love for coffee and long walks brought David and Grace together. They now run a small coffee shop together in Nairobi. David has completed his certificate fee, Grace is working on hers.',
                     quote: '"We found love in a coffee cup" — David & Grace'
                 },
                 { 
@@ -1174,7 +1156,7 @@
                     statusText: 'Moving In Together',
                     milestone: 'Relocation',
                     sparks: '🔥🔥🔥🔥🔥',
-                    story: 'Long-distance never stopped them. Michael and Esther video-called every day for 3 months before meeting in person. Both have completed their certificate fees and are now planning their future together. Michael is planning to relocate to Uganda to be with Esther.',
+                    story: 'Long-distance never stopped them. Michael and Esther video-called every day for 3 months before meeting in person. Both have completed their certificate fees and are now planning their future together.',
                     quote: '"Love knows no distance" — Michael & Esther'
                 }
             ],
@@ -1194,7 +1176,7 @@
                     statusText: 'Family Reunion',
                     milestone: 'Family Meeting',
                     sparks: '🔥🔥🔥🔥',
-                    story: 'Two hearts, one beautiful love story. Caleb and Faith found each other on ClassyDate and never looked back. Both have completed their certificate fees and are planning a family reunion. Their children are excited to meet each other.',
+                    story: 'Two hearts, one beautiful love story. Caleb and Faith found each other on ClassyDate and never looked back. Both have completed their certificate fees and are planning a family reunion.',
                     quote: '"We found each other at the right time" — Caleb & Faith'
                 }
             ],
@@ -1234,7 +1216,7 @@
                     statusText: 'Wedding',
                     milestone: 'Getting Married',
                     sparks: '🔥🔥🔥🔥🔥',
-                    story: 'They found love on ClassyDate and their journey has been nothing short of beautiful. Both have completed their certificate fees and are getting married. Their families are excited for the big day.',
+                    story: 'They found love on ClassyDate and their journey has been nothing short of beautiful. Both have completed their certificate fees and are getting married.',
                     quote: '"Love is the best thing that happened to us" — Stephen & Nancy'
                 }
             ]
@@ -1269,7 +1251,6 @@
             { partner1: 'Michael Kiplagat', partner2: 'Sarah Chepkoech', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'July 1, 2026' }
         ];
 
-        // Upcoming meetings data (August 25, 2026)
         const upcomingMeetings = [
             { 
                 partner1: 'George Marcus', 
@@ -1445,11 +1426,9 @@
             const initials1 = couple.partner1.split(' ').map(n => n[0]).join('');
             const initials2 = couple.partner2.split(' ').map(n => n[0]).join('');
 
-            // HEADER
             document.getElementById('modal-title').innerHTML = `${couple.partner1} <span class="heart">❤️</span> ${couple.partner2}`;
             document.getElementById('modal-connected-date').textContent = `✨ Connected on ${couple.date}`;
 
-            // STATUS ROW
             const statusEl = document.getElementById('modal-status');
             if (couple.status === 'connected') {
                 statusEl.className = 'modal-status connected';
@@ -1459,7 +1438,6 @@
                 statusEl.textContent = '💜 Connecting';
             }
 
-            // Certificate statuses
             const cert1El = document.getElementById('modal-cert1');
             const cert2El = document.getElementById('modal-cert2');
             
@@ -1479,7 +1457,6 @@
                 cert2El.textContent = `⏳ ${couple.partner2.split(' ')[0]}: Not Yet`;
             }
 
-            // LOVE SPARKS
             const sparksCount = (couple.sparks || '🔥🔥🔥🔥🔥').length;
             document.getElementById('love-sparks-text').textContent = couple.sparks || '🔥🔥🔥🔥🔥 ❤️';
             const dots = document.querySelectorAll('.spark-dot');
@@ -1491,7 +1468,6 @@
                 }
             });
 
-            // PARTNER 1
             document.getElementById('partner1-avatar').textContent = initials1;
             document.getElementById('partner1-name').textContent = couple.partner1;
             document.getElementById('partner1-detail').textContent = `${couple.p1Country} · ${couple.p1Age} yrs`;
@@ -1509,7 +1485,6 @@
                 cert1.textContent = '⏳ Certificate Fee: Not Yet';
             }
 
-            // PARTNER 2
             document.getElementById('partner2-avatar').textContent = initials2;
             document.getElementById('partner2-name').textContent = couple.partner2;
             document.getElementById('partner2-detail').textContent = `${couple.p2Country} · ${couple.p2Age} yrs`;
@@ -1527,12 +1502,10 @@
                 cert2.textContent = '⏳ Certificate Fee: Not Yet';
             }
 
-            // DETAILS GRID - 3 COLUMNS (Days Together REMOVED)
             document.getElementById('modal-connection-type').textContent = couple.connectionType || 'International';
             document.getElementById('modal-status-text').textContent = couple.statusText || 'In Progress';
             document.getElementById('modal-milestone').textContent = couple.milestone || 'Planning';
 
-            // LOVE STORY
             document.getElementById('modal-story').textContent = couple.story || 'A beautiful love story...';
             document.getElementById('modal-quote').textContent = `💬 "${couple.quote || 'Love is beautiful'}" — ${couple.partner1.split(' ')[0]} & ${couple.partner2.split(' ')[0]}`;
 
@@ -1611,12 +1584,11 @@
 
         console.log('💎 ClassyDate Connections Page - FINAL VERSION!');
         console.log('❤️ Total couples:', Object.values(connectionsData).reduce((a, b) => a + b.length, 0));
-        console.log('📅 Months:', Object.keys(connectionsData).join(', '));
         console.log('✅ Days Together REMOVED');
         console.log('✅ Love Journey REMOVED');
         console.log('✅ 3 columns in Details Grid');
-        console.log('✅ All fields match the data you provided');
-        console.log('🔥 ULTIMATE HOT VERSION - FINAL!');
+        console.log('✅ All fields match your data');
+        console.log('🔥 COMPLETE FULL CODE!');
     </script>
 
 </body>
