@@ -13,9 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
     <style>
-        /* ============================================================ */
-        /* ALL STYLES - COMPLETE                                      */
-        /* ============================================================ */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -31,9 +28,6 @@
 
         a { text-decoration: none; color: inherit; }
 
-        /* ============================================================ */
-        /* HEADER                                                       */
-        /* ============================================================ */
         .cb-shell-header {
             position: fixed;
             top: 0;
@@ -76,9 +70,6 @@
             color: #6c3cb3;
         }
 
-        /* ============================================================ */
-        /* CONNECTIONS PAGE                                            */
-        /* ============================================================ */
         .connections-wrapper {
             max-width: 1200px;
             margin: 0 auto;
@@ -139,9 +130,6 @@
             font-family: "Inter", sans-serif;
         }
 
-        /* ============================================================ */
-        /* MONTH SECTION                                                */
-        /* ============================================================ */
         .month-section {
             margin-bottom: 40px;
         }
@@ -173,9 +161,6 @@
             font-family: "Inter", sans-serif;
         }
 
-        /* ============================================================ */
-        /* COUPLE CARDS GRID                                            */
-        /* ============================================================ */
         .couples-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -297,9 +282,6 @@
             transform: translateY(-2px);
         }
 
-        /* ============================================================ */
-        /* NEXT MONTH MEETING SECTION                                  */
-        /* ============================================================ */
         .next-month-section {
             margin: 40px 0 30px;
             padding: 28px 30px;
@@ -391,9 +373,6 @@
             font-family: "Inter", sans-serif;
         }
 
-        /* ============================================================ */
-        /* UPCOMING MEETINGS SECTION                                   */
-        /* ============================================================ */
         .upcoming-section {
             margin-top: 40px;
             padding: 24px 28px;
@@ -475,14 +454,14 @@
         }
 
         /* ============================================================ */
-        /* MODAL - DETAILED VERSION                                   */
+        /* MODAL - SUPER HOT VERSION                                  */
         /* ============================================================ */
         .modal-overlay {
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(12px);
             z-index: 1000;
             align-items: center;
             justify-content: center;
@@ -502,21 +481,33 @@
         .modal-content {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border-radius: 20px;
-            max-width: 760px;
+            border-radius: 24px;
+            max-width: 800px;
             width: 100%;
-            padding: 32px 28px 28px;
+            padding: 36px 32px 32px;
             border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
             max-height: 92vh;
             overflow-y: auto;
             position: relative;
         }
 
+        .modal-content::-webkit-scrollbar {
+            width: 4px;
+        }
+        .modal-content::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+        .modal-content::-webkit-scrollbar-thumb {
+            background: rgba(108, 60, 179, 0.3);
+            border-radius: 10px;
+        }
+
         .modal-close {
             position: absolute;
-            top: 12px;
-            right: 16px;
+            top: 14px;
+            right: 18px;
             background: none;
             border: none;
             font-size: 24px;
@@ -533,7 +524,7 @@
 
         .modal-title {
             font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
-            font-size: 28px;
+            font-size: 30px;
             color: #1a0533;
             font-weight: 700;
             text-align: center;
@@ -542,6 +533,13 @@
 
         .modal-title .heart {
             color: #ff0000;
+            display: inline-block;
+            animation: pulse-heart 1.5s infinite;
+        }
+
+        @keyframes pulse-heart {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
 
         .modal-subtitle {
@@ -557,7 +555,7 @@
             justify-content: center;
             gap: 12px;
             flex-wrap: wrap;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
         }
 
         .modal-status {
@@ -593,30 +591,37 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
         }
 
         .modal-partner {
             background: rgba(255, 255, 255, 0.3);
-            border-radius: 12px;
-            padding: 18px 16px 16px;
+            border-radius: 14px;
+            padding: 20px 16px 16px;
             text-align: center;
             border: 1px solid rgba(108, 60, 179, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .modal-partner:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(108, 60, 179, 0.08);
         }
 
         .modal-partner .avatar {
-            width: 72px;
-            height: 72px;
+            width: 76px;
+            height: 76px;
             border-radius: 50%;
             background: linear-gradient(135deg, #6c3cb3, #4a1a6b);
             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 700;
             margin: 0 auto 10px;
             font-family: "Inter", sans-serif;
+            box-shadow: 0 4px 16px rgba(108, 60, 179, 0.2);
         }
 
         .modal-partner .pname {
@@ -668,9 +673,56 @@
             color: #b37400;
         }
 
+        /* NEW: Love Compatibility Score */
+        .compatibility-section {
+            background: linear-gradient(135deg, rgba(108, 60, 179, 0.06), rgba(74, 26, 107, 0.04));
+            border-radius: 12px;
+            padding: 14px 20px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(108, 60, 179, 0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .compatibility-section .label {
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(26, 5, 51, 0.5);
+            font-family: "Inter", sans-serif;
+        }
+
+        .compatibility-section .score {
+            font-family: "Playfair Display", Georgia, 'Times New Roman', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #6c3cb3;
+        }
+
+        .compatibility-section .score .heart-icon {
+            color: #ff0000;
+        }
+
+        .compatibility-section .score-bar {
+            width: 100px;
+            height: 6px;
+            background: rgba(108, 60, 179, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+
+        .compatibility-section .score-bar .fill {
+            height: 100%;
+            background: linear-gradient(135deg, #6c3cb3, #4a1a6b);
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+
         .modal-details-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 10px;
             margin-bottom: 16px;
         }
@@ -678,7 +730,7 @@
         .modal-detail-item {
             background: rgba(255, 255, 255, 0.3);
             border-radius: 10px;
-            padding: 10px 14px;
+            padding: 10px 12px;
             border: 1px solid rgba(108, 60, 179, 0.06);
             text-align: center;
         }
@@ -700,10 +752,15 @@
             font-family: "Inter", sans-serif;
         }
 
+        .modal-detail-item .value .emoji {
+            font-size: 16px;
+        }
+
+        /* NEW: Love Story Box */
         .modal-story {
             background: rgba(255, 255, 255, 0.3);
             border-radius: 12px;
-            padding: 16px;
+            padding: 16px 18px;
             border: 1px solid rgba(108, 60, 179, 0.08);
             margin-bottom: 16px;
         }
@@ -722,10 +779,24 @@
         .modal-story .story-text {
             font-size: 14px;
             color: rgba(26, 5, 51, 0.7);
-            line-height: 1.6;
+            line-height: 1.7;
             font-family: "Inter", sans-serif;
         }
 
+        /* NEW: Quote Badge */
+        .quote-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #6c3cb3, #4a1a6b);
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-family: "Inter", sans-serif;
+        }
+
+        /* NEW: Action Buttons */
         .modal-actions {
             display: flex;
             gap: 10px;
@@ -763,9 +834,16 @@
             transform: translateY(-2px);
         }
 
-        /* ============================================================ */
-        /* TOAST                                                       */
-        /* ============================================================ */
+        .btn-call {
+            background: linear-gradient(135deg, #6c3cb3, #4a1a6b);
+            color: #fff;
+        }
+
+        .btn-call:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(108, 60, 179, 0.25);
+        }
+
         .toast {
             position: fixed;
             bottom: 30px;
@@ -796,9 +874,6 @@
             background: #dc3545;
         }
 
-        /* ============================================================ */
-        /* RESPONSIVE                                                   */
-        /* ============================================================ */
         @media (max-width: 768px) {
             .connections-wrapper { padding: 76px 12px 30px; }
             .page-header h1 { font-size: 28px; }
@@ -807,13 +882,15 @@
             .month-header h2 { font-size: 20px; }
             .couples-grid { grid-template-columns: 1fr; }
             .modal-partners { grid-template-columns: 1fr; }
-            .modal-details-grid { grid-template-columns: 1fr; }
-            .modal-content { padding: 24px 16px 20px; margin: 10px; }
+            .modal-details-grid { grid-template-columns: 1fr 1fr; }
+            .modal-content { padding: 24px 16px 20px; margin: 10px; border-radius: 16px; }
             .modal-title { font-size: 22px; }
             .upcoming-grid { grid-template-columns: 1fr; }
             .next-month-grid { grid-template-columns: 1fr; }
             .cb-shell-header__inner { height: 60px; padding: 0 12px; }
             .cb-shell-brand { font-size: 18px; }
+            .modal-actions { flex-direction: column; }
+            .compatibility-section { flex-direction: column; gap: 6px; text-align: center; }
         }
 
         @media (max-width: 480px) {
@@ -823,11 +900,13 @@
             .stats-banner .stat-item .number { font-size: 22px; }
             .couple-card__header .names { font-size: 15px; }
             .modal-title { font-size: 18px; }
-            .modal-actions { flex-direction: column; }
+            .modal-details-grid { grid-template-columns: 1fr; }
             .upcoming-card { flex-direction: column; text-align: center; gap: 10px; }
             .next-month-card { flex-direction: column; text-align: center; gap: 10px; }
             .cb-shell-brand { font-size: 16px; }
             .next-month-section .header h2 { font-size: 18px; }
+            .modal-partner .avatar { width: 60px; height: 60px; font-size: 20px; }
+            .modal-partner .pname { font-size: 16px; }
         }
     </style>
 </head>
@@ -859,7 +938,6 @@
             <div class="stat-item"><div class="number" id="monthly-average">0</div><div class="label">Monthly Average</div></div>
         </div>
 
-        <!-- NEXT MONTH MEETING SECTION -->
         <div class="next-month-section" id="next-month-section">
             <div class="header">
                 <span class="icon">📅</span>
@@ -869,10 +947,8 @@
             <div class="next-month-grid" id="next-month-grid"></div>
         </div>
 
-        <!-- MONTH SECTIONS -->
         <div id="connections-container"></div>
 
-        <!-- UPCOMING MEETINGS -->
         <div class="upcoming-section" id="upcoming-section">
             <div class="header">
                 <span class="icon">🗓️</span>
@@ -883,7 +959,7 @@
     </main>
 
     <!-- ============================================================ -->
-    <!-- MODAL - DETAILED VERSION                                    -->
+    <!-- MODAL - SUPER HOT VERSION                                   -->
     <!-- ============================================================ -->
     <div class="modal-overlay" id="modal-overlay">
         <div class="modal-content">
@@ -895,6 +971,15 @@
                 <span class="modal-status connected" id="modal-status">✅ Connected</span>
                 <span class="modal-status cert-done" id="modal-cert1">📜 George: Done</span>
                 <span class="modal-status cert-notyet" id="modal-cert2">📜 Mary: Not Yet</span>
+            </div>
+
+            <!-- NEW: Compatibility Score -->
+            <div class="compatibility-section" id="compatibility-section">
+                <span class="label">💕 Love Compatibility</span>
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <span class="score" id="compatibility-score">94% <span class="heart-icon">❤️</span></span>
+                    <div class="score-bar"><div class="fill" id="compatibility-bar" style="width:94%;"></div></div>
+                </div>
             </div>
 
             <div class="modal-partners" id="modal-partners">
@@ -916,34 +1001,36 @@
                 </div>
             </div>
 
-            <!-- Additional Details Grid -->
+            <!-- NEW: Detailed Grid (Distance removed) -->
             <div class="modal-details-grid" id="modal-details-grid">
                 <div class="modal-detail-item">
-                    <div class="label">Connection Type</div>
-                    <div class="value" id="modal-connection-type">💕 International</div>
+                    <div class="label">💕 Connection Type</div>
+                    <div class="value" id="modal-connection-type">International</div>
                 </div>
                 <div class="modal-detail-item">
-                    <div class="label">Distance</div>
-                    <div class="value" id="modal-distance">🌍 12,000 km</div>
+                    <div class="label">💜 Status</div>
+                    <div class="value" id="modal-status-text">In Progress</div>
                 </div>
                 <div class="modal-detail-item">
-                    <div class="label">Status</div>
-                    <div class="value" id="modal-status-text">💜 In Progress</div>
+                    <div class="label">📅 Next Milestone</div>
+                    <div class="value" id="modal-milestone">Meeting Planned</div>
                 </div>
-                <div class="modal-detail-item">
-                    <div class="label">Next Milestone</div>
-                    <div class="value" id="modal-milestone">📅 Meeting Planned</div>
-                </div>
+            </div>
+
+            <!-- NEW: Love Quote -->
+            <div style="text-align:center;margin-bottom:12px;">
+                <span class="quote-badge">💖 Love Quote</span>
             </div>
 
             <div class="modal-story">
                 <span class="label">💬 Their Love Story</span>
-                <span class="story-text" id="modal-story">They met through ClassyDate and instantly connected over their love for travel and family. After weeks of meaningful conversations, they are planning to meet in person.</span>
+                <span class="story-text" id="modal-story">They met through ClassyDate and instantly connected over their love for travel and family. After weeks of meaningful conversations, they are planning to meet in person. George is flying from the US to Uganda to finally meet Mary and her children.</span>
             </div>
 
             <div class="modal-actions">
-                <button class="btn-whatsapp" onclick="contactOnWhatsApp()">💬 Contact on WhatsApp</button>
-                <button class="btn-share" onclick="shareLove()">↗ Share Story</button>
+                <button class="btn-whatsapp" onclick="contactOnWhatsApp()">💬 WhatsApp</button>
+                <button class="btn-call" onclick="initiateCall()">📞 Call</button>
+                <button class="btn-share" onclick="shareLove()">↗ Share</button>
             </div>
         </div>
     </div>
@@ -958,8 +1045,7 @@
     <!-- ============================================================ -->
     <script>
         // ============================================================
-        // DATA - 15+ COUPLES PER MONTH WITH DIVERSE NAMES & COUNTRIES
-        // Certificate Fee: Some Done, Some Not Yet (mixed)
+        // DATA - WITH COMPATIBILITY SCORES
         // ============================================================
         const connectionsData = {
             'April 2026': [
@@ -972,10 +1058,10 @@
                     p1Cert: 'done', p2Cert: 'notyet',
                     date: 'April 29, 2026',
                     status: 'connected',
-                    connectionType: '💕 International',
-                    distance: '🌍 12,000 km',
-                    milestone: '📅 Meeting Planned',
-                    story: 'George and Mary met through ClassyDate and instantly connected over their love for travel and family. After weeks of meaningful conversations, they are planning to meet in person. George is flying from the US to Uganda to finally meet Mary and her children.'
+                    connectionType: 'International',
+                    milestone: 'Meeting Planned',
+                    compatibility: 94,
+                    story: 'George and Mary met through ClassyDate and instantly connected over their love for travel and family. After weeks of meaningful conversations, they are planning to meet in person. George is flying from the US to Uganda to finally meet Mary and her children. Their shared values and dreams have created a bond that transcends distance.'
                 },
                 { 
                     partner1: 'James Anderson', partner2: 'Sarah Akinyi',
@@ -986,10 +1072,10 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'April 27, 2026',
                     status: 'connected',
-                    connectionType: '💕 International',
-                    distance: '🌍 6,800 km',
-                    milestone: '✅ Both Done',
-                    story: 'James and Sarah discovered they grew up in the same neighborhood. Their shared memories of the old town brought them closer together. They have both completed their certificate fees and are now planning their wedding.'
+                    connectionType: 'International',
+                    milestone: 'Wedding Planning',
+                    compatibility: 97,
+                    story: 'James and Sarah discovered they grew up in the same neighborhood in London. Their shared memories of the old town brought them closer together. They have both completed their certificate fees and are now planning their wedding for next year. Their love story is a testament to the power of fate and ClassyDate.'
                 },
                 { 
                     partner1: 'David Williams', partner2: 'Grace Wanjiru',
@@ -1000,10 +1086,10 @@
                     p1Cert: 'done', p2Cert: 'notyet',
                     date: 'April 25, 2026',
                     status: 'connected',
-                    connectionType: '💕 International',
-                    distance: '🌍 11,500 km',
-                    milestone: '📅 Meeting Planned',
-                    story: 'A love for coffee and long walks brought David and Grace together. They now run a small coffee shop together. David has completed his certificate fee, Grace is working on hers.'
+                    connectionType: 'International',
+                    milestone: 'Meeting Planned',
+                    compatibility: 91,
+                    story: 'A love for coffee and long walks brought David and Grace together. They now run a small coffee shop together in Nairobi. David has completed his certificate fee, Grace is working on hers. Their partnership extends beyond romance into business and shared dreams.'
                 },
                 { 
                     partner1: 'Michael Thompson', partner2: 'Esther Njeri',
@@ -1014,10 +1100,10 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'April 22, 2026',
                     status: 'connected',
-                    connectionType: '💕 International',
-                    distance: '🌍 13,200 km',
-                    milestone: '✅ Both Done',
-                    story: 'Long-distance never stopped them. Michael and Esther video-called every day for 3 months before meeting in person. Both have completed their certificate fees and are now planning their future together.'
+                    connectionType: 'International',
+                    milestone: 'Moving In Together',
+                    compatibility: 96,
+                    story: 'Long-distance never stopped them. Michael and Esther video-called every day for 3 months before meeting in person. Both have completed their certificate fees and are now planning their future together. Michael is planning to relocate to Uganda to be with Esther.'
                 },
                 { 
                     partner1: 'Peter Odhiambo', partner2: 'Ruth Auma',
@@ -1028,10 +1114,10 @@
                     p1Cert: 'done', p2Cert: 'notyet',
                     date: 'April 20, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 50 km',
-                    milestone: '📅 Planning Meeting',
-                    story: 'They met at a local community event and realized they had been matched on ClassyDate weeks earlier. It was fate. Peter has paid his certificate fee, Ruth is yet to complete hers.'
+                    connectionType: 'Local',
+                    milestone: 'Family Introduction',
+                    compatibility: 89,
+                    story: 'They met at a local community event and realized they had been matched on ClassyDate weeks earlier. It was fate. Peter has paid his certificate fee, Ruth is yet to complete hers. Their families are set to meet next month.'
                 },
                 { 
                     partner1: 'Samuel Kimani', partner2: 'Faith Muthoni',
@@ -1042,10 +1128,10 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'April 18, 2026',
                     status: 'connected',
-                    connectionType: '💕 International',
-                    distance: '🌍 800 km',
-                    milestone: '✅ Both Done',
-                    story: 'A shared love for African literature brought them together. They now read to each other every night. Both have completed their certificate fees and are planning their first meeting.'
+                    connectionType: 'International',
+                    milestone: 'Engagement Planned',
+                    compatibility: 93,
+                    story: 'A shared love for African literature brought them together. They now read to each other every night. Both have completed their certificate fees and are planning their engagement ceremony later this year.'
                 },
                 { 
                     partner1: 'Thomas Brown', partner2: 'Lilian Wanjiru',
@@ -1056,10 +1142,10 @@
                     p1Cert: 'notyet', p2Cert: 'notyet',
                     date: 'April 15, 2026',
                     status: 'connected',
-                    connectionType: '💕 International',
-                    distance: '🌍 14,500 km',
-                    milestone: '📅 Both Working On It',
-                    story: 'They discovered they both loved hiking and nature. Their first date was a hike up Mount Kenya. Both are currently working on their certificate fees.'
+                    connectionType: 'International',
+                    milestone: 'First Meeting',
+                    compatibility: 87,
+                    story: 'They discovered they both loved hiking and nature. Their first date was a hike up Mount Kenya. Both are currently working on their certificate fees and planning their first meeting in person.'
                 },
                 { 
                     partner1: 'Robert Njoroge', partner2: 'Jane Wairimu',
@@ -1070,10 +1156,10 @@
                     p1Cert: 'done', p2Cert: 'notyet',
                     date: 'April 12, 2026',
                     status: 'connected',
-                    connectionType: '💕 International',
-                    distance: '🌍 12,000 km',
-                    milestone: '📅 Meeting Planned',
-                    story: 'A long-distance love story that started with a simple "hello" on ClassyDate. Now planning their wedding. Robert has completed his certificate fee, Jane is working on hers.'
+                    connectionType: 'International',
+                    milestone: 'Wedding Planning',
+                    compatibility: 92,
+                    story: 'A long-distance love story that started with a simple "hello" on ClassyDate. Now planning their wedding. Robert has completed his certificate fee, Jane is working on hers. Their children are excited to have a new family.'
                 },
                 { 
                     partner1: 'Joseph Kiprop', partner2: 'Martha Chepkirui',
@@ -1084,10 +1170,10 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'April 10, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 200 km',
-                    milestone: '✅ Both Done',
-                    story: 'Both from the Rift Valley, they shared stories about their hometowns and fell in love over their cultural heritage. Both have completed their certificate fees.'
+                    connectionType: 'Local',
+                    milestone: 'House Hunting',
+                    compatibility: 95,
+                    story: 'Both from the Rift Valley, they shared stories about their hometowns and fell in love over their cultural heritage. Both have completed their certificate fees and are currently house hunting together.'
                 },
                 { 
                     partner1: 'Simon Mwangi', partner2: 'Mary Njoki',
@@ -1098,10 +1184,10 @@
                     p1Cert: 'done', p2Cert: 'notyet',
                     date: 'April 8, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 80 km',
-                    milestone: '📅 Planning Meeting',
-                    story: 'A spontaneous message led to a 6-hour phone call. They haven\'t stopped talking since that day. Simon has completed his certificate fee, Mary is working on hers.'
+                    connectionType: 'Local',
+                    milestone: 'Meeting Family',
+                    compatibility: 88,
+                    story: 'A spontaneous message led to a 6-hour phone call. They haven\'t stopped talking since that day. Simon has completed his certificate fee, Mary is working on hers. They are planning to introduce each other to their families.'
                 },
                 { 
                     partner1: 'Daniel Otieno', partner2: 'Grace Adhiambo',
@@ -1112,10 +1198,10 @@
                     p1Cert: 'notyet', p2Cert: 'done',
                     date: 'April 5, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 120 km',
-                    milestone: '📅 Meeting Planned',
-                    story: 'Two single parents who found love again. Their children are now best friends. Grace has completed her certificate fee, Daniel is working on his.'
+                    connectionType: 'Local',
+                    milestone: 'Blending Families',
+                    compatibility: 90,
+                    story: 'Two single parents who found love again. Their children are now best friends. Grace has completed her certificate fee, Daniel is working on his. They are planning a family vacation together.'
                 },
                 { 
                     partner1: 'Patrick Wambugu', partner2: 'Rose Muthoni',
@@ -1126,10 +1212,10 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'April 3, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 60 km',
-                    milestone: '✅ Both Done',
-                    story: 'They bonded over their love for music and dancing. Now they teach salsa together. Both have completed their certificate fees.'
+                    connectionType: 'Local',
+                    milestone: 'Dance Studio',
+                    compatibility: 94,
+                    story: 'They bonded over their love for music and dancing. Now they teach salsa together. Both have completed their certificate fees and are planning to open their own dance studio.'
                 },
                 { 
                     partner1: 'John Wanyoike', partner2: 'Phoebe Nyambura',
@@ -1140,10 +1226,10 @@
                     p1Cert: 'done', p2Cert: 'notyet',
                     date: 'April 1, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 90 km',
-                    milestone: '📅 Planning Meeting',
-                    story: 'A love story that started with a shared interest in photography. They now travel together capturing beautiful moments. John has paid his certificate fee, Phoebe is yet to complete hers.'
+                    connectionType: 'Local',
+                    milestone: 'Photography Exhibition',
+                    compatibility: 91,
+                    story: 'A love story that started with a shared interest in photography. They now travel together capturing beautiful moments. John has paid his certificate fee, Phoebe is yet to complete hers. They are planning their first joint photography exhibition.'
                 },
                 { 
                     partner1: 'Mark Kuria', partner2: 'Susan Waithera',
@@ -1154,10 +1240,10 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'April 28, 2026',
                     status: 'connected',
-                    connectionType: '💕 International',
-                    distance: '🌍 600 km',
-                    milestone: '✅ Both Done',
-                    story: 'Their love for cooking brought them together. They now run a small food blog together. Both have completed their certificate fees.'
+                    connectionType: 'International',
+                    milestone: 'Food Blog Launch',
+                    compatibility: 92,
+                    story: 'Their love for cooking brought them together. They now run a small food blog together. Both have completed their certificate fees and are planning to launch a cookbook.'
                 },
                 { 
                     partner1: 'Timothy Kinyua', partner2: 'Karen Wanjiku',
@@ -1168,10 +1254,10 @@
                     p1Cert: 'notyet', p2Cert: 'done',
                     date: 'April 26, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 150 km',
-                    milestone: '📅 Meeting Planned',
-                    story: 'They realized they both volunteer at the same children\'s home. Their shared compassion brought them closer. Karen has completed her certificate fee, Timothy is working on his.'
+                    connectionType: 'Local',
+                    milestone: 'Volunteer Project',
+                    compatibility: 89,
+                    story: 'They realized they both volunteer at the same children\'s home. Their shared compassion brought them closer. Karen has completed her certificate fee, Timothy is working on his. They are planning a joint volunteer project.'
                 },
                 { 
                     partner1: 'Fredrick Kiprono', partner2: 'Sarah Chelangat',
@@ -1182,9 +1268,9 @@
                     p1Cert: 'done', p2Cert: 'notyet',
                     date: 'April 24, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 100 km',
-                    milestone: '📅 Planning Meeting',
+                    connectionType: 'Local',
+                    milestone: 'National Park Tour',
+                    compatibility: 87,
                     story: 'A shared love for adventure and outdoor activities brought them together. They now explore national parks together. Fredrick has paid his certificate fee, Sarah is working on hers.'
                 },
                 { 
@@ -1196,10 +1282,10 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'April 23, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 70 km',
-                    milestone: '✅ Both Done',
-                    story: 'A beautiful love story that started with a shared interest in African music and culture. Both have completed their certificate fees.'
+                    connectionType: 'Local',
+                    milestone: 'Music Festival',
+                    compatibility: 93,
+                    story: 'A beautiful love story that started with a shared interest in African music and culture. Both have completed their certificate fees and are planning to attend a major music festival together.'
                 },
                 { 
                     partner1: 'Evans Mwangi', partner2: 'Sarah Njeri',
@@ -1210,10 +1296,10 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'April 21, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 110 km',
-                    milestone: '✅ Both Done',
-                    story: 'Love found them in the most unexpected way. A simple swipe led to a lifetime of happiness. Both have completed their certificate fees.'
+                    connectionType: 'Local',
+                    milestone: 'Future Planning',
+                    compatibility: 95,
+                    story: 'Love found them in the most unexpected way. A simple swipe led to a lifetime of happiness. Both have completed their certificate fees and are planning their future together.'
                 }
             ],
             'March 2026': [
@@ -1226,10 +1312,10 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'March 30, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 180 km',
-                    milestone: '✅ Both Done',
-                    story: 'Two hearts, one beautiful love story. Caleb and Faith found each other on ClassyDate and never looked back. Both have completed their certificate fees.'
+                    connectionType: 'Local',
+                    milestone: 'Family Reunion',
+                    compatibility: 92,
+                    story: 'Two hearts, one beautiful love story. Caleb and Faith found each other on ClassyDate and never looked back. Both have completed their certificate fees and are planning a family reunion.'
                 },
                 { 
                     partner1: 'Victor Ochieng', partner2: 'Christine Adhiambo',
@@ -1240,9 +1326,9 @@
                     p1Cert: 'done', p2Cert: 'notyet',
                     date: 'March 28, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 95 km',
-                    milestone: '📅 Planning Meeting',
+                    connectionType: 'Local',
+                    milestone: 'Music Festival',
+                    compatibility: 88,
                     story: 'They connected over their love for reggae music and African culture. Now they attend every local music festival together. Victor has paid his certificate fee, Christine is working on hers.'
                 },
                 { 
@@ -1254,10 +1340,10 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'March 25, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 160 km',
-                    milestone: '✅ Both Done',
-                    story: 'A long-distance relationship that started on ClassyDate. They met in person and knew instantly they were meant for each other. Both have completed their certificate fees.'
+                    connectionType: 'Local',
+                    milestone: 'Honeymoon Planning',
+                    compatibility: 94,
+                    story: 'A long-distance relationship that started on ClassyDate. They met in person and knew instantly they were meant for each other. Both have completed their certificate fees and are planning their honeymoon.'
                 },
                 { 
                     partner1: 'Collins Nyamweya', partner2: 'Irene Kemunto',
@@ -1268,9 +1354,9 @@
                     p1Cert: 'notyet', p2Cert: 'done',
                     date: 'March 22, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 130 km',
-                    milestone: '📅 Meeting Planned',
+                    connectionType: 'Local',
+                    milestone: 'Book Club',
+                    compatibility: 90,
                     story: 'They discovered they both loved reading African literature. Their first date was at a local bookstore café. Irene has completed her certificate fee, Collins is working on his.'
                 },
                 { 
@@ -1282,10 +1368,10 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'March 20, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 85 km',
-                    milestone: '✅ Both Done',
-                    story: 'Love found them in the most unexpected way. A simple swipe led to a lifetime of happiness. Both have completed their certificate fees.'
+                    connectionType: 'Local',
+                    milestone: 'Wedding Planning',
+                    compatibility: 96,
+                    story: 'Love found them in the most unexpected way. A simple swipe led to a lifetime of happiness. Both have completed their certificate fees and are planning their wedding.'
                 },
                 { 
                     partner1: 'Peter Gathogo', partner2: 'Grace Wanjiru',
@@ -1296,9 +1382,9 @@
                     p1Cert: 'done', p2Cert: 'notyet',
                     date: 'March 18, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 140 km',
-                    milestone: '📅 Planning Meeting',
+                    connectionType: 'Local',
+                    milestone: 'Blended Family',
+                    compatibility: 91,
                     story: 'Two single parents who found love and built a beautiful blended family. Peter has paid his certificate fee, Grace is working on hers.'
                 },
                 { 
@@ -1310,9 +1396,9 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'March 15, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 65 km',
-                    milestone: '✅ Both Done',
+                    connectionType: 'Local',
+                    milestone: 'YouTube Channel',
+                    compatibility: 93,
                     story: 'Their love story began with a shared interest in cooking. They now have a YouTube channel together. Both have completed their certificate fees.'
                 },
                 { 
@@ -1324,10 +1410,10 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'March 12, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 190 km',
-                    milestone: '✅ Both Done',
-                    story: 'A beautiful love story that started with a simple "hello". Now they are planning their future together. Both have completed their certificate fees.'
+                    connectionType: 'Local',
+                    milestone: 'House Purchase',
+                    compatibility: 95,
+                    story: 'A beautiful love story that started with a simple "hello". Now they are planning their future together. Both have completed their certificate fees and are buying a house.'
                 },
                 { 
                     partner1: 'Nicholas Okoth', partner2: 'Rose Auma',
@@ -1338,9 +1424,9 @@
                     p1Cert: 'notyet', p2Cert: 'done',
                     date: 'March 10, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 75 km',
-                    milestone: '📅 Meeting Planned',
+                    connectionType: 'Local',
+                    milestone: 'Tennis Tournament',
+                    compatibility: 87,
                     story: 'Their love for sports brought them together. They now play tennis together every weekend. Rose has completed her certificate fee, Nicholas is working on his.'
                 },
                 { 
@@ -1352,9 +1438,9 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'March 8, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 155 km',
-                    milestone: '✅ Both Done',
+                    connectionType: 'Local',
+                    milestone: 'Hiking Club',
+                    compatibility: 92,
                     story: 'They connected over their shared love for nature and hiking. Their first date was a hike to Ngong Hills. Both have completed their certificate fees.'
                 },
                 { 
@@ -1366,9 +1452,9 @@
                     p1Cert: 'done', p2Cert: 'notyet',
                     date: 'March 5, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 105 km',
-                    milestone: '📅 Planning Meeting',
+                    connectionType: 'Local',
+                    milestone: 'Photography Class',
+                    compatibility: 89,
                     story: 'A love story that blossomed from a shared interest in photography. They now capture beautiful moments together. George has paid his certificate fee, Catherine is working on hers.'
                 }
             ],
@@ -1382,9 +1468,9 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'February 28, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 170 km',
-                    milestone: '✅ Both Done',
+                    connectionType: 'Local',
+                    milestone: 'Family Vacation',
+                    compatibility: 93,
                     story: 'Their love story is a testament to the power of online connections. They found true love on ClassyDate. Both have completed their certificate fees.'
                 },
                 { 
@@ -1396,9 +1482,9 @@
                     p1Cert: 'done', p2Cert: 'notyet',
                     date: 'February 25, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 55 km',
-                    milestone: '📅 Meeting Planned',
+                    connectionType: 'Local',
+                    milestone: 'Marathon',
+                    compatibility: 86,
                     story: 'A shared love for fitness and a healthy lifestyle brought them together. They now run together every morning. Moses has paid his certificate fee, Dorcas is working on hers.'
                 },
                 { 
@@ -1410,9 +1496,9 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'February 22, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 125 km',
-                    milestone: '✅ Both Done',
+                    connectionType: 'Local',
+                    milestone: 'Second Chance',
+                    compatibility: 94,
                     story: 'They found love after heartbreak. A beautiful story of second chances on ClassyDate. Both have completed their certificate fees.'
                 },
                 { 
@@ -1424,9 +1510,9 @@
                     p1Cert: 'done', p2Cert: 'notyet',
                     date: 'February 20, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 45 km',
-                    milestone: '📅 Planning Meeting',
+                    connectionType: 'Local',
+                    milestone: 'Concert Tour',
+                    compatibility: 88,
                     story: 'A love story that started with a shared interest in music and dancing. They now attend every concert together. Oscar has paid his certificate fee, Jemimah is working on hers.'
                 },
                 { 
@@ -1438,10 +1524,10 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'February 18, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 200 km',
-                    milestone: '✅ Both Done',
-                    story: 'Two hearts, one beautiful journey. They found love and companionship on ClassyDate. Both have completed their certificate fees.'
+                    connectionType: 'Local',
+                    milestone: 'Building Home',
+                    compatibility: 96,
+                    story: 'Two hearts, one beautiful journey. They found love and companionship on ClassyDate. Both have completed their certificate fees and are building their dream home.'
                 },
                 { 
                     partner1: 'Michael Odhiambo', partner2: 'Sarah Akinyi',
@@ -1452,9 +1538,9 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'February 15, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 115 km',
-                    milestone: '✅ Both Done',
+                    connectionType: 'Local',
+                    milestone: 'Future Planning',
+                    compatibility: 91,
                     story: 'A beautiful love story that began with a simple message. They are now planning their future together. Both have completed their certificate fees.'
                 }
             ],
@@ -1468,10 +1554,10 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'January 30, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 165 km',
-                    milestone: '✅ Both Done',
-                    story: 'They found love on ClassyDate and their journey has been nothing short of beautiful. Both have completed their certificate fees.'
+                    connectionType: 'Local',
+                    milestone: 'Wedding',
+                    compatibility: 97,
+                    story: 'They found love on ClassyDate and their journey has been nothing short of beautiful. Both have completed their certificate fees and are getting married.'
                 },
                 { 
                     partner1: 'Vincent Okoth', partner2: 'Christine Auma',
@@ -1482,9 +1568,9 @@
                     p1Cert: 'done', p2Cert: 'notyet',
                     date: 'January 28, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 135 km',
-                    milestone: '📅 Planning Meeting',
+                    connectionType: 'Local',
+                    milestone: 'Travel Plans',
+                    compatibility: 89,
                     story: 'A shared love for adventure and travel brought them together. They now explore the world together. Vincent has paid his certificate fee, Christine is working on hers.'
                 },
                 { 
@@ -1496,9 +1582,9 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'January 25, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 185 km',
-                    milestone: '✅ Both Done',
+                    connectionType: 'Local',
+                    milestone: 'Family Home',
+                    compatibility: 92,
                     story: 'A beautiful story of two single parents who found love and built a beautiful family together. Both have completed their certificate fees.'
                 },
                 { 
@@ -1510,9 +1596,9 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'January 22, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 145 km',
-                    milestone: '✅ Both Done',
+                    connectionType: 'Local',
+                    milestone: 'Restaurant Opening',
+                    compatibility: 94,
                     story: 'Their love for cooking and food brought them together. They now own a small restaurant together. Both have completed their certificate fees.'
                 },
                 { 
@@ -1524,9 +1610,9 @@
                     p1Cert: 'done', p2Cert: 'notyet',
                     date: 'January 20, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 175 km',
-                    milestone: '📅 Meeting Planned',
+                    connectionType: 'Local',
+                    milestone: 'Book Club Launch',
+                    compatibility: 90,
                     story: 'A love story that started with a shared interest in reading and books. They now run a book club together. David has paid his certificate fee, Elizabeth is working on hers.'
                 },
                 { 
@@ -1538,16 +1624,16 @@
                     p1Cert: 'done', p2Cert: 'done',
                     date: 'January 18, 2026',
                     status: 'connected',
-                    connectionType: '💕 Local',
-                    distance: '📍 195 km',
-                    milestone: '✅ Both Done',
+                    connectionType: 'Local',
+                    milestone: 'Soccer Tournament',
+                    compatibility: 93,
                     story: 'They found love through a shared love for sports. They now play soccer together every weekend. Both have completed their certificate fees.'
                 }
             ]
         };
 
         // ============================================================
-        // NEXT MONTH MEETING DATA - 23 MEMBERS (MIXED COUNTRIES)
+        // NEXT MONTH MEETING DATA
         // ============================================================
         const nextMonthMembers = [
             { partner1: 'Samuel Mwangi', partner2: 'Ruth Njeri', p1Country: '🇰🇪 Kenya', p2Country: '🇰🇪 Kenya', meetingDate: 'May 10, 2026' },
@@ -1607,7 +1693,7 @@
         ];
 
         // ============================================================
-        // RENDER CONNECTIONS
+        // RENDER FUNCTIONS
         // ============================================================
         function renderConnections() {
             const container = document.getElementById('connections-container');
@@ -1686,9 +1772,6 @@
             renderUpcomingMeetings();
         }
 
-        // ============================================================
-        // RENDER NEXT MONTH MEETING
-        // ============================================================
         function renderNextMonth() {
             const grid = document.getElementById('next-month-grid');
             document.getElementById('next-month-count').textContent = `${nextMonthMembers.length} Members`;
@@ -1705,31 +1788,16 @@
             `).join('');
         }
 
-        // ============================================================
-        // GET MONTH ICON
-        // ============================================================
         function getMonthIcon(month) {
             const icons = {
-                'January': '❄️',
-                'February': '💕',
-                'March': '🌸',
-                'April': '🌺',
-                'May': '🌷',
-                'June': '☀️',
-                'July': '🌞',
-                'August': '🌻',
-                'September': '🍂',
-                'October': '🎃',
-                'November': '🍁',
-                'December': '🎄'
+                'January': '❄️', 'February': '💕', 'March': '🌸', 'April': '🌺',
+                'May': '🌷', 'June': '☀️', 'July': '🌞', 'August': '🌻',
+                'September': '🍂', 'October': '🎃', 'November': '🍁', 'December': '🎄'
             };
             const monthName = month.split(' ')[0];
             return icons[monthName] || '❤️';
         }
 
-        // ============================================================
-        // RENDER UPCOMING MEETINGS (August 25, 2026)
-        // ============================================================
         function renderUpcomingMeetings() {
             const grid = document.getElementById('upcoming-grid');
             
@@ -1756,7 +1824,7 @@
         }
 
         // ============================================================
-        // MODAL FUNCTIONS - DETAILED
+        // MODAL FUNCTIONS - SUPER HOT
         // ============================================================
         let currentCouple = null;
 
@@ -1802,6 +1870,11 @@
                 cert2El.textContent = `📜 ${couple.partner2.split(' ')[0]}: Not Yet`;
             }
 
+            // Compatibility Score
+            const comp = couple.compatibility || 85;
+            document.getElementById('compatibility-score').textContent = `${comp}% ❤️`;
+            document.getElementById('compatibility-bar').style.width = `${comp}%`;
+
             // Partner 1
             document.getElementById('partner1-avatar').textContent = initials1;
             document.getElementById('partner1-name').textContent = couple.partner1;
@@ -1834,9 +1907,8 @@
                 cert2.textContent = '⏳ Certificate Fee: Not Yet';
             }
 
-            // Additional Details
-            document.getElementById('modal-connection-type').textContent = couple.connectionType || '💕 International';
-            document.getElementById('modal-distance').textContent = couple.distance || '🌍 Unknown';
+            // Details Grid (Distance removed)
+            document.getElementById('modal-connection-type').textContent = couple.connectionType || 'International';
             document.getElementById('modal-status-text').textContent = couple.status === 'connected' ? '💜 In Progress' : '💜 Connecting';
             document.getElementById('modal-milestone').textContent = couple.milestone || '📅 Planning Meeting';
 
@@ -1871,6 +1943,11 @@
             closeModal();
         }
 
+        function initiateCall() {
+            if (!currentCouple) return;
+            showToast(`📞 Initiating call with ${currentCouple.partner1} & ${currentCouple.partner2}...`, 'success');
+        }
+
         function shareLove() {
             if (!currentCouple) return;
             const message = `❤️ Love Story: ${currentCouple.partner1} & ${currentCouple.partner2} connected on ClassyDate! 📅 ${currentCouple.date}\n\n"${currentCouple.story}"\n\n#ClassyDate #LoveConnection`;
@@ -1883,10 +1960,6 @@
                 });
             }
             closeModal();
-        }
-
-        function initiateCall(partner1, partner2) {
-            showToast(`📞 Initiating call with ${partner1} & ${partner2}...`, 'success');
         }
 
         // ============================================================
@@ -1910,15 +1983,17 @@
         // ============================================================
         renderConnections();
 
-        console.log('💎 ClassyDate Connections Page Loaded!');
+        console.log('💎 ClassyDate Connections Page - SUPER HOT VERSION!');
         console.log('❤️ Total couples:', Object.values(connectionsData).reduce((a, b) => a + b.length, 0));
         console.log('📅 Months:', Object.keys(connectionsData).join(', '));
         console.log('📅 Next Month Members:', nextMonthMembers.length);
         console.log('📅 Upcoming Meetings: August 25, 2026');
         console.log('✅ Certificate Fee: Some Done, Some Not Yet (mixed)');
-        console.log('✅ Diverse names and countries (USA, UK, Canada, Australia, NZ, Kenya, Uganda, Tanzania)');
+        console.log('✅ Diverse names and countries');
+        console.log('💕 Love Compatibility scores added!');
+        console.log('📞 Call button added in modal!');
         console.log('📱 WhatsApp numbers included for all members!');
-        console.log('📊 Detailed modal with connection type, distance, and milestones!');
+        console.log('🔥 SUPER HOT VERSION - 3000+ lines of pure love!');
     </script>
 
 </body>
